@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerar Favicon.ico - GaG Receitas BR</title>
+</head>
+<body>
+    <h1>Gerador de Favicon</h1>
+    <canvas id="faviconCanvas" width="32" height="32" style="border: 1px solid #ccc; image-rendering: pixelated; width: 64px; height: 64px;"></canvas>
+    <br><br>
+    <button onclick="generateAndDownload()">Gerar e Baixar favicon.ico</button>
+
+    <script>
+        function drawFavicon() {
+            const canvas = document.getElementById('faviconCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, 32, 32);
+            
+            // Create gradient background
+            const gradient = ctx.createLinearGradient(0, 0, 32, 32);
+            gradient.addColorStop(0, '#667eea');
+            gradient.addColorStop(1, '#764ba2');
+            
+            // Draw background with rounded corners
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.roundRect(0, 0, 32, 32, 4);
+            ctx.fill();
+            
+            // Draw simple plant icon
+            ctx.fillStyle = '#4CAF50';
+            
+            // Stem
+            ctx.fillRect(15, 18, 2, 8);
+            
+            // Leaves
+            ctx.beginPath();
+            ctx.ellipse(12, 16, 4, 3, -0.3, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.ellipse(20, 16, 4, 3, 0.3, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Top leaf
+            ctx.beginPath();
+            ctx.ellipse(16, 12, 3, 4, 0, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+
+        function generateAndDownload() {
+            drawFavicon();
+            
+            const canvas = document.getElementById('faviconCanvas');
+            
+            // Convert canvas to blob
+            canvas.toBlob(function(blob) {
+                // Create download link
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'favicon.ico';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }, 'image/png');
+        }
+
+        // Draw favicon on page load
+        window.onload = drawFavicon;
+    </script>
+</body>
+</html>

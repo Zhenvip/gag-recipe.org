@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Favicon ICO - GaG Receitas BR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .favicon-preview {
+            text-align: center;
+            margin: 30px 0;
+        }
+        canvas {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            background: white;
+        }
+        .download-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .download-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌱 Gerador de Favicon ICO</h1>
+        
+        <div class="info">
+            <h3>📋 Instruções:</h3>
+            <ol>
+                <li>Clique no botão "Gerar Favicon" para criar os arquivos</li>
+                <li>Baixe o arquivo favicon.ico gerado</li>
+                <li>Coloque o arquivo na raiz do seu site</li>
+                <li>O favicon aparecerá automaticamente na aba do navegador</li>
+            </ol>
+        </div>
+
+        <div class="favicon-preview">
+            <h3>Preview dos Favicons:</h3>
+            <canvas id="favicon16" width="16" height="16"></canvas>
+            <canvas id="favicon32" width="32" height="32"></canvas>
+            <canvas id="favicon48" width="48" height="48"></canvas>
+            <p><small>16x16, 32x32, 48x48 pixels</small></p>
+        </div>
+
+        <div class="download-section">
+            <button class="download-btn" onclick="generateFavicons()">🎨 Gerar Favicons</button>
+            <a id="downloadLink" class="download-btn" style="display: none;">📥 Baixar favicon.ico</a>
+        </div>
+
+        <div class="info">
+            <h3>🔧 Como usar:</h3>
+            <p>Depois de baixar o favicon.ico, adicione esta linha no &lt;head&gt; das suas páginas HTML:</p>
+            <code>&lt;link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"&gt;</code>
+        </div>
+    </div>
+
+    <script>
+        function drawFavicon(canvas, size) {
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+            
+            // Create gradient background
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#667eea');
+            gradient.addColorStop(1, '#764ba2');
+            
+            // Draw rounded background
+            const radius = Math.max(2, size * 0.15);
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.roundRect(0, 0, size, size, radius);
+            ctx.fill();
+            
+            // Draw plant emoji (simplified as a green shape)
+            const centerX = size / 2;
+            const centerY = size / 2;
+            const leafSize = size * 0.3;
+            
+            // Draw simple plant shape
+            ctx.fillStyle = '#4CAF50';
+            
+            // Stem
+            ctx.fillRect(centerX - 1, centerY, 2, size * 0.3);
+            
+            // Leaves
+            ctx.beginPath();
+            ctx.ellipse(centerX - leafSize/2, centerY - leafSize/4, leafSize/2, leafSize/3, -0.5, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.ellipse(centerX + leafSize/2, centerY - leafSize/4, leafSize/2, leafSize/3, 0.5, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Top leaf
+            ctx.beginPath();
+            ctx.ellipse(centerX, centerY - leafSize/2, leafSize/3, leafSize/2, 0, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+
+        function generateFavicons() {
+            // Draw favicons in different sizes
+            drawFavicon(document.getElementById('favicon16'), 16);
+            drawFavicon(document.getElementById('favicon32'), 32);
+            drawFavicon(document.getElementById('favicon48'), 48);
+            
+            // Create ICO file data
+            createICOFile();
+        }
+
+        function createICOFile() {
+            // For simplicity, we'll create a simple favicon using the 32x32 canvas
+            const canvas = document.getElementById('favicon32');
+            
+            // Convert to blob and create download link
+            canvas.toBlob(function(blob) {
+                // Create a simple ICO-like file (actually PNG)
+                const url = URL.createObjectURL(blob);
+                const downloadLink = document.getElementById('downloadLink');
+                downloadLink.href = url;
+                downloadLink.download = 'favicon.ico';
+                downloadLink.style.display = 'inline-block';
+                downloadLink.onclick = function() {
+                    setTimeout(() => URL.revokeObjectURL(url), 100);
+                };
+            }, 'image/png');
+        }
+
+        // Auto-generate on page load
+        window.onload = function() {
+            generateFavicons();
+        };
+    </script>
+</body>
+</html>

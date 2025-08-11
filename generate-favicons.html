@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GaG Favicon Generator</title>
+</head>
+<body>
+    <h2>🎨 GaG Favicon Generator</h2>
+    <p>正在生成favicon文件...</p>
+    
+    <div id="status"></div>
+    <canvas id="canvas" style="border: 1px solid #ccc; display: none;"></canvas>
+    
+    <script>
+        function generateFavicon(size, filename) {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            canvas.width = size;
+            canvas.height = size;
+            
+            // 清除画布
+            ctx.clearRect(0, 0, size, size);
+            
+            // 创建渐变背景
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#667eea');
+            gradient.addColorStop(1, '#764ba2');
+            
+            // 绘制圆角矩形背景
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            const radius = size * 0.2; // 20% 圆角
+            roundRect(ctx, 0, 0, size, size, radius);
+            ctx.fill();
+            
+            // 绘制植物图标
+            const fontSize = size * 0.6; // 60% 字体大小
+            ctx.font = `${fontSize}px Arial`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillStyle = 'white';
+            ctx.fillText('🌱', size/2, size/2);
+            
+            // 转换为数据URL并下载
+            const dataURL = canvas.toDataURL('image/png');
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = dataURL;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            return dataURL;
+        }
+        
+        // 添加roundRect支持
+        function roundRect(ctx, x, y, width, height, radius) {
+            ctx.beginPath();
+            ctx.moveTo(x + radius, y);
+            ctx.lineTo(x + width - radius, y);
+            ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+            ctx.lineTo(x + width, y + height - radius);
+            ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+            ctx.lineTo(x + radius, y + height);
+            ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+            ctx.lineTo(x, y + radius);
+            ctx.quadraticCurveTo(x, y, x + radius, y);
+            ctx.closePath();
+        }
+        
+        // 生成所有需要的尺寸
+        window.onload = function() {
+            const status = document.getElementById('status');
+            
+            setTimeout(() => {
+                generateFavicon(32, 'favicon-32x32.png');
+                status.innerHTML += '<p>✅ 已生成 favicon-32x32.png</p>';
+            }, 500);
+            
+            setTimeout(() => {
+                generateFavicon(16, 'favicon-16x16.png');
+                status.innerHTML += '<p>✅ 已生成 favicon-16x16.png</p>';
+            }, 1000);
+            
+            setTimeout(() => {
+                generateFavicon(180, 'apple-touch-icon.png');
+                status.innerHTML += '<p>✅ 已生成 apple-touch-icon.png</p>';
+            }, 1500);
+            
+            setTimeout(() => {
+                status.innerHTML += '<p><strong>🎉 所有图标文件已生成完成！</strong></p>';
+                status.innerHTML += '<p>请将下载的文件放到网站根目录。</p>';
+            }, 2000);
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PNG Favicon Generator</title>
+</head>
+<body style="padding: 20px; font-family: Arial, sans-serif;">
+    <h2>🎨 PNG Favicon Generator</h2>
+    <p>Clique no botão para gerar favicons PNG:</p>
+    
+    <div style="margin: 20px 0;">
+        <button onclick="generateFavicon(32)" style="padding: 10px 20px; margin: 5px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer;">Gerar 32x32</button>
+        <button onclick="generateFavicon(16)" style="padding: 10px 20px; margin: 5px; background: #764ba2; color: white; border: none; border-radius: 5px; cursor: pointer;">Gerar 16x16</button>
+        <button onclick="generateFavicon(180)" style="padding: 10px 20px; margin: 5px; background: #43e97b; color: white; border: none; border-radius: 5px; cursor: pointer;">Gerar Apple Touch Icon</button>
+    </div>
+    
+    <canvas id="canvas" style="border: 1px solid #ddd; margin: 20px 0;"></canvas>
+    
+    <script>
+        function generateFavicon(size) {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            canvas.width = size;
+            canvas.height = size;
+            
+            // 清除画布
+            ctx.clearRect(0, 0, size, size);
+            
+            // 创建渐变背景
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#667eea');
+            gradient.addColorStop(1, '#764ba2');
+            
+            // 绘制圆角矩形背景
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            const radius = size * 0.2; // 20% 圆角
+            ctx.roundRect(0, 0, size, size, radius);
+            ctx.fill();
+            
+            // 绘制植物图标
+            const fontSize = size * 0.6; // 60% 字体大小
+            ctx.font = `${fontSize}px Arial`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('🌱', size/2, size/2);
+            
+            // 转换为数据URL并下载
+            const dataURL = canvas.toDataURL('image/png');
+            const link = document.createElement('a');
+            
+            if (size === 180) {
+                link.download = 'apple-touch-icon.png';
+            } else {
+                link.download = `favicon-${size}x${size}.png`;
+            }
+            
+            link.href = dataURL;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            console.log(`Generated ${size}x${size} favicon`);
+        }
+        
+        // 添加roundRect支持
+        if (!CanvasRenderingContext2D.prototype.roundRect) {
+            CanvasRenderingContext2D.prototype.roundRect = function(x, y, width, height, radius) {
+                this.beginPath();
+                this.moveTo(x + radius, y);
+                this.lineTo(x + width - radius, y);
+                this.quadraticCurveTo(x + width, y, x + width, y + radius);
+                this.lineTo(x + width, y + height - radius);
+                this.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+                this.lineTo(x + radius, y + height);
+                this.quadraticCurveTo(x, y + height, x, y + height - radius);
+                this.lineTo(x, y + radius);
+                this.quadraticCurveTo(x, y, x + radius, y);
+                this.closePath();
+            };
+        }
+        
+        // 页面加载时自动生成所有尺寸
+        window.onload = function() {
+            setTimeout(() => generateFavicon(32), 500);
+            setTimeout(() => generateFavicon(16), 1000);
+            setTimeout(() => generateFavicon(180), 1500);
+        };
+    </script>
+</body>
+</html>
+

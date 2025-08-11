@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações Legais - GaG Receitas BR | Termos e Privacidade</title>
+    <meta name="description" content="Centro de informações legais do GaG Receitas BR. Acesse nossos termos de uso, política de privacidade e outras informações legais importantes.">
+    <meta name="keywords" content="legal, termos, privacidade, LGPD, GaG Receitas BR, Grow a Garden">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #6a5acd;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #6a5acd;
+        }
+
+        main {
+            background: white;
+            margin: 2rem auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .legal-header {
+            background: linear-gradient(135deg, #6a5acd 0%, #f093fb 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .legal-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .legal-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .legal-content {
+            padding: 4rem 3rem;
+        }
+
+        .legal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .legal-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 2rem;
+            border-left: 4px solid;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .legal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .terms-card {
+            border-left-color: #6a5acd;
+        }
+
+        .privacy-card {
+            border-left-color: #f093fb;
+        }
+
+        .disclaimer-card {
+            border-left-color: #f5576c;
+        }
+
+        .legal-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .legal-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .legal-card ul {
+            color: #666;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .legal-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .legal-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .highlight-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .highlight-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-section p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .contact-item h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        footer p {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .legal-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .legal-header h1 {
+                font-size: 2rem;
+            }
+
+            .nav-menu {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="GaG Receitas BR Logo">
+                GaG Receitas BR
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="recipes.html">📋 Receitas</a></li>
+                <li><a href="calculator.html">🧮 Calculadora</a></li>
+                <li><a href="faq.html">❓ FAQ</a></li>
+                <li><a href="about.html">ℹ️ Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="legal-header">
+            <h1>⚖️ Informações Legais</h1>
+            <p>
+                Transparência e proteção de dados são fundamentais para nossa comunidade. 
+                Aqui você encontra todas as informações legais importantes sobre o uso do GaG Receitas BR.
+            </p>
+        </div>
+
+        <div class="legal-content">
+            <div class="legal-grid">
+                <div class="legal-card terms-card">
+                    <h3>📋 Termos de Uso</h3>
+                    <p>
+                        Nossos termos de uso definem as regras e condições para usar o GaG Receitas BR. 
+                        Cobrimos tudo sobre uso aceitável, direitos de propriedade intelectual e responsabilidades.
+                    </p>
+                    <ul>
+                        <li>✅ Regras de uso aceitável</li>
+                        <li>✅ Direitos e responsabilidades</li>
+                        <li>✅ Conteúdo da comunidade</li>
+                        <li>✅ Limitações de responsabilidade</li>
+                        <li>✅ Modificações dos termos</li>
+                    </ul>
+                    <a href="terms.html" class="legal-btn">📋 Ler Termos Completos</a>
+                </div>
+
+                <div class="legal-card privacy-card">
+                    <h3>🔒 Política de Privacidade</h3>
+                    <p>
+                        Nossa política de privacidade está em total conformidade com a LGPD (Lei Geral de Proteção de Dados) 
+                        e explica como coletamos, usamos e protegemos seus dados.
+                    </p>
+                    <ul>
+                        <li>🇧🇷 Conformidade com LGPD</li>
+                        <li>🔒 Proteção de dados pessoais</li>
+                        <li>🍪 Política de cookies transparente</li>
+                        <li>✋ Seus direitos sobre os dados</li>
+                        <li>🛡️ Medidas de segurança</li>
+                    </ul>
+                    <a href="privacy.html" class="legal-btn">🔒 Ler Política Completa</a>
+                </div>
+
+                <div class="legal-card disclaimer-card">
+                    <h3>⚠️ Isenção de Responsabilidade</h3>
+                    <p>
+                        O GaG Receitas BR é um site não-oficial da comunidade brasileira. 
+                        Não somos afiliados à Roblox Corporation ou aos desenvolvedores do Grow a Garden.
+                    </p>
+                    <ul>
+                        <li>🎮 Site não-oficial da comunidade</li>
+                        <li>🚫 Não afiliado ao Roblox</li>
+                        <li>📊 Dados baseados na comunidade</li>
+                        <li>🔄 Informações sujeitas a mudanças</li>
+                        <li>⚡ Uso por conta e risco</li>
+                    </ul>
+                    <p style="margin-top: 1rem;">
+                        <strong>Importante:</strong> Todas as receitas e estratégias são baseadas na experiência 
+                        da comunidade brasileira e podem variar conforme atualizações do jogo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="highlight-section">
+                <h2>🇧🇷 Compromisso com a Legislação Brasileira</h2>
+                <p>
+                    Estamos totalmente comprometidos em seguir todas as leis brasileiras aplicáveis, 
+                    especialmente a <strong>Lei Geral de Proteção de Dados (LGPD - Lei 13.709/2018)</strong>. 
+                    Seus dados pessoais são tratados com o máximo cuidado e transparência.
+                </p>
+
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <h4>📧 Questões Legais</h4>
+                        <p>legal@gag-recipe.org</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>🔒 Privacidade e LGPD</h4>
+                        <p>privacidade@gag-recipe.org</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>📞 Contato Geral</h4>
+                        <p>contato@gag-recipe.org</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>⏰ Tempo de Resposta</h4>
+                        <p>Até 15 dias úteis</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: #f8f9fa; padding: 2rem; border-radius: 15px; border-left: 4px solid #6a5acd;">
+                <h3 style="color: #6a5acd; margin-bottom: 1rem;">📋 Resumo dos Seus Direitos (LGPD)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <div style="text-align: center;">
+                        <h4 style="color: #333; margin-bottom: 0.5rem;">📋 Acesso</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Ver seus dados</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <h4 style="color: #333; margin-bottom: 0.5rem;">✏️ Correção</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Corrigir dados incorretos</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <h4 style="color: #333; margin-bottom: 0.5rem;">🗑️ Exclusão</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Deletar seus dados</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <h4 style="color: #333; margin-bottom: 0.5rem;">📦 Portabilidade</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Exportar seus dados</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <h4 style="color: #333; margin-bottom: 0.5rem;">🚫 Oposição</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Opor-se ao processamento</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <h4 style="color: #333; margin-bottom: 0.5rem;">ℹ️ Informação</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Saber como usamos</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1.5rem; color: #666;">
+                    <strong>Para exercer qualquer desses direitos, entre em contato conosco através dos e-mails acima.</strong>
+                </p>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem; color: #999; font-style: italic;">
+                <p><strong>Última atualização:</strong> Janeiro de 2025</p>
+                <p>Versão 1.0 - Documentos legais iniciais da comunidade brasileira</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 GaG Receitas BR - Guia não-oficial da comunidade brasileira de Grow a Garden</p>
+            <p>
+                <a href="terms.html" style="color: #6a5acd; text-decoration: none; margin: 0 10px;">📋 Termos de Uso</a> |
+                <a href="privacy.html" style="color: #6a5acd; text-decoration: none; margin: 0 10px;">🔒 Política de Privacidade</a> |
+                <a href="about.html" style="color: #6a5acd; text-decoration: none; margin: 0 10px;">ℹ️ Sobre Nós</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
+

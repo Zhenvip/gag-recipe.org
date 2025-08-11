@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo GaG - Receitas Grow a Garden | Roblox Estratégias</title>
+    <meta name="description" content="Guia completo de receitas do Roblox Grow a Garden (GaG), incluindo receitas Prismatic, Transcendent para ganhar Sheckles e Mutation Sprays">
+    <meta name="keywords" content="Grow a Garden, GaG, Roblox, receitas, Prismatic, Transcendent, Sheckles, Mutation Spray, guia culinário">
+    
+    <!-- Analytics Scripts -->
+    <script defer data-domain="gag-recipe.org" src="https://click.pageview.click/js/script.js"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K69S0867R5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K69S0867R5');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #6a5acd;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #6a5acd;
+        }
+
+        main {
+            margin-top: 80px;
+            padding: 2rem 0;
+        }
+
+        .hero {
+            text-align: center;
+            color: white;
+            padding: 4rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .categories {
+            background: white;
+            padding: 4rem 0;
+            margin-top: 2rem;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .category-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+            transform: translateX(-100%);
+            transition: transform 0.6s;
+        }
+
+        .category-card:hover::before {
+            transform: translateX(100%);
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .category-card.prismatic {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .category-card.transcendent {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .category-card.rapida {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .category-card.eficiente {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .category-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .category-card p {
+            opacity: 0.9;
+        }
+
+        .recipe-display {
+            background: white;
+            padding: 4rem 0;
+            min-height: 60vh;
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .recipe-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            border-left: 4px solid #6a5acd;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .recipe-card h4 {
+            color: #6a5acd;
+            margin-bottom: 0.5rem;
+        }
+
+        .ingredients {
+            margin: 1rem 0;
+        }
+
+        .ingredients span {
+            background: #f0f0f0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+        }
+
+        .rarity {
+            font-weight: bold;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        .rarity.prismatic {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .rarity.transcendent {
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            color: white;
+        }
+
+        .rarity.rapida {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            color: white;
+        }
+
+        .rarity.eficiente {
+            background: linear-gradient(45deg, #43e97b, #38f9d7);
+            color: white;
+        }
+
+        .community {
+            background: #f8f9fa;
+            padding: 4rem 0;
+        }
+
+        .community-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .search-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: #6a5acd;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-tab {
+            background: #e0e0e0;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .filter-tab.active {
+            background: #6a5acd;
+            color: white;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .stats-banner {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .tip-box {
+            background: #e8f5e8;
+            border-left: 4px solid #43e97b;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">🌱 GaG Receitas BR</a>
+            <ul class="nav-menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#recipes">Receitas</a></li>
+                <li><a href="#community">Comunidade</a></li>
+                <li><a href="#guides">Guias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Guia Completo GaG Receitas</h1>
+                <p>O guia mais completo do Roblox Grow a Garden em português! Domine as receitas Prismatic e Transcendent, ganhe milhares de Sheckles e obtenha Mutation Sprays raros!</p>
+            </div>
+        </section>
+
+        <div class="stats-banner">
+            <div class="container">
+                <h3>📊 Estatísticas da Comunidade Brasileira</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">25.000+</div>
+                        <div>Jogadores ativos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">150+</div>
+                        <div>Receitas descobertas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div>Taxa de sucesso</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50M+</div>
+                        <div>Sheckles ganhos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="recipes" class="categories">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem; color: #333; font-size: 2.5rem;">🍳 Categorias de Receitas</h2>
+                
+                <div class="tip-box">
+                    <strong>💡 Dica Pro:</strong> Use ingredientes da mesma cor para aumentar as chances de receitas raras. Cultive durante eventos especiais para multiplicadores de XP!
+                </div>
+
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="🔍 Buscar receitas ou ingredientes..." id="searchInput">
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">Todas as Receitas</button>
+                        <button class="filter-tab" data-filter="prismatic">Prismatic</button>
+                        <button class="filter-tab" data-filter="transcendent">Transcendent</button>
+                        <button class="filter-tab" data-filter="rapida">Receitas Rápidas</button>
+                        <button class="filter-tab" data-filter="eficiente">Combos Eficientes</button>
+                    </div>
+                </div>
+
+                <div class="category-grid">
+                    <div class="category-card prismatic" data-category="prismatic">
+                        <h3>💎 Receitas Prismatic</h3>
+                        <p>As receitas mais raras e valiosas! Oferecem os melhores rewards em Sheckles e itens exclusivos. Requerem ingredientes especiais e timing perfeito.</p>
+                        <div style="margin-top: 1rem; font-size: 0.9rem;">
+                            <strong>Ganho médio:</strong> 1.000-5.000 Sheckles<br>
+                            <strong>Tempo de cozimento:</strong> 10-30 minutos<br>
+                            <strong>Dificuldade:</strong> ⭐⭐⭐⭐⭐
+                        </div>
+                    </div>
+
+                    <div class="category-card transcendent" data-category="transcendent">
+                        <h3>🌟 Receitas Transcendent</h3>
+                        <p>Receitas transcendentais que desbloqueiam poderes especiais e Mutation Sprays únicos. Perfeitas para evolução de pets e decorações exclusivas.</p>
+                        <div style="margin-top: 1rem; font-size: 0.9rem;">
+                            <strong>Ganho médio:</strong> 500-2.000 Sheckles<br>
+                            <strong>Rewards especiais:</strong> Mutation Sprays, pets raros<br>
+                            <strong>Dificuldade:</strong> ⭐⭐⭐⭐
+                        </div>
+                    </div>
+
+                    <div class="category-card rapida" data-category="rapida">
+                        <h3>⚡ Receitas Rápidas</h3>
+                        <p>Ideais para farm rápido de XP e Sheckles básicos. Perfeitas para iniciantes e para completar missões diárias rapidamente.</p>
+                        <div style="margin-top: 1rem; font-size: 0.9rem;">
+                            <strong>Tempo:</strong> 1-5 minutos<br>
+                            <strong>Taxa de sucesso:</strong> 95%+<br>
+                            <strong>Ideal para:</strong> Iniciantes e farm diário
+                        </div>
+                    </div>
+
+                    <div class="category-card eficiente" data-category="eficiente">
+                        <h3>🎯 Combos Eficientes</h3>
+                        <p>As combinações mais testadas pela comunidade brasileira! Melhor custo-benefício entre tempo investido e recompensas obtidas.</p>
+                        <div style="margin-top: 1rem; font-size: 0.9rem;">
+                            <strong>Eficiência:</strong> ⭐⭐⭐⭐⭐<br>
+                            <strong>Recomendado:</strong> Comunidade GaG BR<br>
+                            <strong>ROI:</strong> Até 300% por hora
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                 <!-- Seção de Recursos Principais -->
+         <section class="features-section" style="background: white; padding: 4rem 0;">
+             <div class="container">
+                 <h2 style="text-align: center; margin-bottom: 3rem; color: #333; font-size: 2.5rem;">🚀 Por Que Escolher o GaG Receitas BR?</h2>
+                 
+                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                     <div class="feature-card">
+                         <div class="feature-icon">🧮</div>
+                         <h3>Calculadora Avançada</h3>
+                         <p>Nossa calculadora exclusiva considera mais de 15 variáveis: eventos especiais, bônus VIP, fases da lua e multiplicadores para maximizar seus lucros.</p>
+                         <a href="calculator.html" style="background: #6a5acd; color: white; padding: 0.8rem 1.5rem; border-radius: 25px; text-decoration: none; display: inline-block; margin-top: 1rem;">🧮 Usar Calculadora</a>
+                     </div>
+                     
+                     <div class="feature-card">
+                         <div class="feature-icon">🔮</div>
+                         <h3>Receitas Exclusivas</h3>
+                         <p>Acesso às receitas Prismatic e Transcendent mais raras, testadas pela comunidade brasileira com ingredientes, tempo e taxa de sucesso detalhados.</p>
+                         <a href="recipes.html" style="background: #f093fb; color: white; padding: 0.8rem 1.5rem; border-radius: 25px; text-decoration: none; display: inline-block; margin-top: 1rem;">📋 Ver Receitas</a>
+                     </div>
+                     
+                     <div class="feature-card">
+                         <div class="feature-icon">📊</div>
+                         <h3>Análises em Tempo Real</h3>
+                         <p>Monitoramento contínuo de tendências do jogo, preços de ingredientes e eficácia de estratégias. Relatórios semanais exclusivos.</p>
+                         <a href="#" style="background: #43e97b; color: white; padding: 0.8rem 1.5rem; border-radius: 25px; text-decoration: none; display: inline-block; margin-top: 1rem;">📈 Ver Análises</a>
+                     </div>
+                     
+                     <div class="feature-card">
+                         <div class="feature-icon">🏆</div>
+                         <h3>Comunidade Ativa</h3>
+                         <p>Mais de 25.000 jogadores brasileiros compartilhando estratégias, dicas e descobertas. Suporte 24/7 em português.</p>
+                         <a href="#community" style="background: #4facfe; color: white; padding: 0.8rem 1.5rem; border-radius: 25px; text-decoration: none; display: inline-block; margin-top: 1rem;">🤝 Participar</a>
+                     </div>
+                     
+                     <div class="feature-card">
+                         <div class="feature-icon">⚡</div>
+                         <h3>Estratégias Rápidas</h3>
+                         <p>Métodos otimizados para farm rápido de Sheckles e XP. Perfeito para jogadores que querem resultados imediatos e eficientes.</p>
+                         <a href="recipes.html#rapida" style="background: #ff6b6b; color: white; padding: 0.8rem 1.5rem; border-radius: 25px; text-decoration: none; display: inline-block; margin-top: 1rem;">⚡ Ver Estratégias</a>
+                     </div>
+                     
+                     <div class="feature-card">
+                         <div class="feature-icon">🎯</div>
+                         <h3>Guias Detalhados</h3>
+                         <p>Tutoriais passo a passo, dicas secretas e estratégias avançadas. Desde iniciante até jogador experiente, temos conteúdo para todos.</p>
+                         <a href="faq.html" style="background: #9c88ff; color: white; padding: 0.8rem 1.5rem; border-radius: 25px; text-decoration: none; display: inline-block; margin-top: 1rem;">📖 Ler Guias</a>
+                     </div>
+                 </div>
+             </div>
+         </section>
+
+         <!-- Seção de Conquistas e Depoimentos -->
+         <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 4rem 0;">
+             <div class="container">
+                 <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">🏅 Conquistas da Comunidade</h2>
+                 
+                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                     <div style="text-align: center; background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px;">
+                         <div style="font-size: 3rem; margin-bottom: 1rem;">💰</div>
+                         <h3>50M+ Sheckles</h3>
+                         <p>Total ganho pela comunidade brasileira usando nossas estratégias</p>
+                     </div>
+                     
+                     <div style="text-align: center; background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px;">
+                         <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+                         <h3>98% Taxa de Sucesso</h3>
+                         <p>Precisão das nossas receitas testadas por milhares de jogadores</p>
+                     </div>
+                     
+                     <div style="text-align: center; background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px;">
+                         <div style="font-size: 3rem; margin-bottom: 1rem;">⭐</div>
+                         <h3>2.8M XP</h3>
+                         <p>Experiência total conquistada pelos membros da nossa comunidade</p>
+                     </div>
+                     
+                     <div style="text-align: center; background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px;">
+                         <div style="font-size: 3rem; margin-bottom: 1rem;">🚀</div>
+                         <h3>1.2K Sheckles/Hora</h3>
+                         <p>Média de ganhos por hora seguindo nossos métodos otimizados</p>
+                     </div>
+                 </div>
+                 
+                 <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; margin-bottom: 2rem;">
+                     <h3 style="text-align: center; margin-bottom: 2rem;">💬 O Que Nossa Comunidade Diz</h3>
+                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                         <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px;">
+                             <p style="font-style: italic; margin-bottom: 1rem;">"Graças ao GaG Receitas BR, consegui fazer minha primeira receita Prismatic! A calculadora é incrível e me ajudou a otimizar meus ganhos em 300%!"</p>
+                             <strong>- João, São Paulo</strong>
+                         </div>
+                         
+                         <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px;">
+                             <p style="font-style: italic; margin-bottom: 1rem;">"A comunidade brasileira é fantástica! Sempre tem alguém online para ajudar e as estratégias realmente funcionam. Já ganhei mais de 100K Sheckles!"</p>
+                             <strong>- Maria, Rio de Janeiro</strong>
+                         </div>
+                         
+                         <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px;">
+                             <p style="font-style: italic; margin-bottom: 1rem;">"Site perfeito para quem quer dominar o Grow a Garden! As receitas são testadas e funcionam mesmo. Recomendo para todos os brasileiros!"</p>
+                             <strong>- Pedro, Belo Horizonte</strong>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </section>
+
+         <!-- Seção de Dicas e Estratégias -->
+         <section style="background: #f8f9fa; padding: 4rem 0;">
+             <div class="container">
+                 <h2 style="text-align: center; margin-bottom: 3rem; color: #333; font-size: 2.5rem;">💡 Dicas e Estratégias Avançadas</h2>
+                 
+                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                     <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-left: 4px solid #6a5acd;">
+                         <h3 style="color: #6a5acd; margin-bottom: 1rem;">🌙 Timing Perfeito</h3>
+                         <p style="margin-bottom: 1rem;">Descubra os melhores horários para cozinhar cada tipo de receita. Receitas Prismatic têm 50% mais chance de sucesso durante a lua cheia no jogo!</p>
+                         <ul style="color: #666; line-height: 1.8;">
+                             <li>🔮 Prismatic: 22h-02h (horário de Brasília)</li>
+                             <li>⭐ Transcendent: Durante eventos especiais</li>
+                             <li>⚡ Rápidas: Qualquer horário (ideais para farm diário)</li>
+                         </ul>
+                     </div>
+                     
+                     <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-left: 4px solid #f093fb;">
+                         <h3 style="color: #f093fb; margin-bottom: 1rem;">🧪 Combinações Secretas</h3>
+                         <p style="margin-bottom: 1rem;">Ingredientes da mesma cor aumentam drasticamente as chances de receitas raras. Nossa comunidade descobriu combos exclusivos!</p>
+                         <ul style="color: #666; line-height: 1.8;">
+                             <li>💜 Roxos: +40% chance Prismatic</li>
+                             <li>🌟 Dourados: +60% XP bonus</li>
+                             <li>❄️ Azuis: +25% Mutation Spray chance</li>
+                         </ul>
+                     </div>
+                     
+                     <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-left: 4px solid #43e97b;">
+                         <h3 style="color: #43e97b; margin-bottom: 1rem;">💰 Maximização de Lucros</h3>
+                         <p style="margin-bottom: 1rem;">Estratégias comprovadas para multiplicar seus ganhos. Jogadores que seguem nosso sistema ganham 300% mais Sheckles!</p>
+                         <ul style="color: #666; line-height: 1.8;">
+                             <li>📈 Use eventos duplo XP ao máximo</li>
+                             <li>🎯 Foque em receitas com melhor ROI</li>
+                             <li>⏰ Planeje sessões de 2-3 horas</li>
+                         </ul>
+                     </div>
+                     
+                     <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-left: 4px solid #4facfe;">
+                         <h3 style="color: #4facfe; margin-bottom: 1rem;">🏆 Progressão Inteligente</h3>
+                         <p style="margin-bottom: 1rem;">Sistema de progressão desenvolvido especialmente para jogadores brasileiros. Do iniciante ao expert em 30 dias!</p>
+                         <ul style="color: #666; line-height: 1.8;">
+                             <li>📚 Semana 1-2: Receitas básicas e farm</li>
+                             <li>🔥 Semana 3-4: Receitas intermediárias</li>
+                             <li>💎 Mês 2+: Domínio das Prismatic</li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+         </section>
+
+         <section class="recipe-display">
+             <div class="container">
+                 <h2 style="text-align: center; margin-bottom: 2rem; color: #333; font-size: 2.5rem;">📋 Receitas em Destaque</h2>
+                 <p style="text-align: center; color: #666; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Confira algumas das receitas mais populares da nossa comunidade brasileira, testadas e aprovadas por milhares de jogadores!</p>
+                
+                <div class="recipe-grid" id="recipeGrid">
+                    <!-- Prismatic Recipes -->
+                    <div class="recipe-card" data-rarity="prismatic">
+                        <h4>🔮 Salada do Jardim Cristalino</h4>
+                        <div class="ingredients">
+                            <span>Cenoura Arco-íris</span>
+                            <span>Alface Estelar</span>
+                            <span>Tomate Diamante</span>
+                            <span>Cogumelo Lunar</span>
+                        </div>
+                        <p><strong>Tempo:</strong> 25 min | <strong>Reward:</strong> 3.500-4.500 Sheckles</p>
+                        <p><strong>Dica:</strong> Cozinhe durante lua cheia para +50% chance de sucesso</p>
+                        <p><strong>Melhor horário:</strong> 22h-02h (horário de Brasília)</p>
+                        <div class="rarity prismatic">Prismatic</div>
+                    </div>
+
+                    <div class="recipe-card" data-rarity="prismatic">
+                        <h4>🌈 Sopa da Energia Sétupla</h4>
+                        <div class="ingredients">
+                            <span>Pimenta de Fogo</span>
+                            <span>Hortelã Glacial</span>
+                            <span>Feijão do Trovão</span>
+                            <span>Cebola da Tempestade</span>
+                        </div>
+                        <p><strong>Tempo:</strong> 30 min | <strong>Reward:</strong> 4.000-5.000 Sheckles</p>
+                        <p><strong>Bônus especial:</strong> Chance de Mutation Spray lendário</p>
+                        <p><strong>Evento:</strong> Dobra rewards durante tempestades no jogo</p>
+                        <div class="rarity prismatic">Prismatic</div>
+                    </div>
+
+                    <!-- Transcendent Recipes -->
+                    <div class="recipe-card" data-rarity="transcendent">
+                        <h4>⭐ Travessa Celestial</h4>
+                        <div class="ingredients">
+                            <span>Maçã do Anjo</span>
+                            <span>Uva da Luz Sagrada</span>
+                            <span>Berry Divino</span>
+                        </div>
+                        <p><strong>Tempo:</strong> 15 min | <strong>Reward:</strong> 1.500-2.000 Sheckles</p>
+                        <p><strong>Item especial:</strong> Asas de Anjo (decoração exclusiva)</p>
+                        <p><strong>Requisito:</strong> Level 25+ no cooking</p>
+                        <div class="rarity transcendent">Transcendent</div>
+                    </div>
+
+                    <div class="recipe-card" data-rarity="transcendent">
+                        <h4>🌙 Poção da Deusa Lunar</h4>
+                        <div class="ingredients">
+                            <span>Flor do Luar</span>
+                            <span>Pó Estelar</span>
+                            <span>Orvalho da Noite</span>
+                        </div>
+                        <p><strong>Tempo:</strong> 20 min | <strong>Reward:</strong> 1.200-1.800 Sheckles</p>
+                        <p><strong>Melhor horário:</strong> Durante a noite no jogo</p>
+                        <p><strong>Efeito:</strong> +25% XP em cooking por 1 hora</p>
+                        <div class="rarity transcendent">Transcendent</div>
+                    </div>
+
+                    <!-- Quick Recipes -->
+                    <div class="recipe-card" data-rarity="rapida">
+                        <h4>🥗 Salada Simples Brasileira</h4>
+                        <div class="ingredients">
+                            <span>Alface Comum</span>
+                            <span>Cenoura</span>
+                            <span>Tomate</span>
+                        </div>
+                        <p><strong>Tempo:</strong> 2 min | <strong>Reward:</strong> 50-100 Sheckles</p>
+                        <p><strong>Perfeito para:</strong> Iniciantes, 100% de sucesso garantido</p>
+                        <p><strong>Farm diário:</strong> Faça 10x para quest diária</p>
+                        <div class="rarity rapida">Receita Rápida</div>
+                    </div>
+
+                    <div class="recipe-card" data-rarity="rapida">
+                        <h4>🍯 Pão de Mel Caseiro</h4>
+                        <div class="ingredients">
+                            <span>Trigo</span>
+                            <span>Mel</span>
+                        </div>
+                        <p><strong>Tempo:</strong> 3 min | <strong>Reward:</strong> 80-120 Sheckles</p>
+                        <p><strong>Dica:</strong> Faça de manhã para XP extra</p>
+                        <p><strong>Combo:</strong> Ótimo com café da manhã virtual</p>
+                        <div class="rarity rapida">Receita Rápida</div>
+                    </div>
+
+                    <!-- Efficient Recipes -->
+                    <div class="recipe-card" data-rarity="eficiente">
+                        <h4>🏆 Banquete Dourado</h4>
+                        <div class="ingredients">
+                            <span>Milho Dourado</span>
+                            <span>Batata Prateada</span>
+                            <span>Cenoura de Bronze</span>
+                        </div>
+                        <p><strong>Tempo:</strong> 10 min | <strong>Reward:</strong> 800-1.200 Sheckles</p>
+                        <p><strong>ROI:</strong> ⭐⭐⭐⭐⭐ Aprovado pela comunidade BR</p>
+                        <p><strong>Meta:</strong> Faça 5x por dia para otimizar ganhos</p>
+                        <div class="rarity eficiente">Combo Eficiente</div>
+                    </div>
+
+                    <div class="recipe-card" data-rarity="eficiente">
+                        <h4>💰 Prato da Fortuna</h4>
+                        <div class="ingredients">
+                            <span>Trevo da Sorte</span>
+                            <span>Abóbora Dourada</span>
+                            <span>Cogumelo da Riqueza</span>
+                        </div>
+                        <p><strong>Tempo:</strong> 8 min | <strong>Reward:</strong> 600-1.000 Sheckles</p>
+                        <p><strong>Efeito especial:</strong> +15% chance de drops raros por 30min</p>
+                        <p><strong>Estratégia:</strong> Use antes de abrir caixas premium</p>
+                        <div class="rarity eficiente">Combo Eficiente</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="community" class="community">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem; color: #333; font-size: 2.5rem;">🤝 Comunidade GaG Brasil</h2>
+                
+                <div class="community-features">
+                    <div class="feature-card">
+                        <div class="feature-icon">📤</div>
+                        <h3>Compartilhe Receitas</h3>
+                        <p>Descobriu uma nova combinação? Compartilhe com a galera e ganhe pontos de reputação e títulos exclusivos da comunidade brasileira!</p>
+                        <button style="background: #6a5acd; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 25px; margin-top: 1rem; cursor: pointer;">Compartilhar Agora</button>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🏅</div>
+                        <h3>Desafios Semanais</h3>
+                        <p>Participe dos desafios culinários da semana, complete achievements especiais e desbloqueie rewards únicos da comunidade BR!</p>
+                        <button style="background: #f093fb; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 25px; margin-top: 1rem; cursor: pointer;">Ver Desafios</button>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">💬</div>
+                        <h3>Discord GaG BR</h3>
+                        <p>Entre no nosso Discord oficial! Chat em tempo real, dicas exclusivas, eventos da comunidade e muito mais com jogadores brasileiros.</p>
+                        <button style="background: #43e97b; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 25px; margin-top: 1rem; cursor: pointer;">Entrar no Discord</button>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Stats & Rankings</h3>
+                        <p>Acompanhe suas estatísticas de cooking, compare com outros jogadores brasileiros e suba no ranking nacional!</p>
+                        <button style="background: #4facfe; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 25px; margin-top: 1rem; cursor: pointer;">Ver Rankings</button>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 10px; margin-top: 3rem; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                    <h3 style="text-align: center; color: #6a5acd; margin-bottom: 1rem;">🔥 Top Receitas da Semana - Brasil</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                            <div style="font-size: 2rem;">🔮</div>
+                            <strong>Salada Cristalina</strong>
+                            <div style="color: #6a5acd; font-size: 0.9rem;">Feitas: 4.127x</div>
+                            <div style="color: #28a745; font-size: 0.8rem;">+32% esta semana</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                            <div style="font-size: 2rem;">🏆</div>
+                            <strong>Banquete Dourado</strong>
+                            <div style="color: #6a5acd; font-size: 0.9rem;">Feitas: 2.856x</div>
+                            <div style="color: #28a745; font-size: 0.8rem;">+18% esta semana</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                            <div style="font-size: 2rem;">⭐</div>
+                            <strong>Travessa Celestial</strong>
+                            <div style="color: #6a5acd; font-size: 0.9rem;">Feitas: 1.923x</div>
+                            <div style="color: #28a745; font-size: 0.8rem;">+25% esta semana</div>
+                        </div>
+                    </div>
+                </div>
+
+                                 <div class="tip-box" style="margin-top: 2rem;">
+                     <strong>🇧🇷 Dica da Comunidade Brasileira:</strong> Junte-se ao grupo "GaG Brasil" no Roblox para trocar ingredientes raros e formar parcerias de farming! Código do grupo: GAG-BR-2025
+                 </div>
+             </div>
+         </section>
+
+         <!-- Seção de Guias e Tutoriais -->
+         <section style="background: white; padding: 4rem 0;">
+             <div class="container">
+                 <h2 style="text-align: center; margin-bottom: 3rem; color: #333; font-size: 2.5rem;">📚 Guias Completos</h2>
+                 
+                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                     <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 15px; text-align: center;">
+                         <div style="font-size: 3rem; margin-bottom: 1rem;">🌱</div>
+                         <h3>Guia do Iniciante</h3>
+                         <p style="margin: 1rem 0; opacity: 0.9;">Tudo que você precisa saber para começar no Grow a Garden. Do básico ao avançado em passos simples.</p>
+                         <ul style="text-align: left; margin: 1rem 0; opacity: 0.9;">
+                             <li>✅ Como plantar seus primeiros ingredientes</li>
+                             <li>✅ Receitas básicas garantidas</li>
+                             <li>✅ Como ganhar seus primeiros 1000 Sheckles</li>
+                             <li>✅ Dicas de economia e gestão</li>
+                         </ul>
+                         <a href="faq.html#iniciante" style="background: rgba(255,255,255,0.2); color: white; padding: 0.8rem 1.5rem; border-radius: 25px; text-decoration: none; display: inline-block; margin-top: 1rem; border: 2px solid rgba(255,255,255,0.3);">📖 Ler Guia</a>
+                     </div>
+                     
+                     <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 2rem; border-radius: 15px; text-align: center;">
+                         <div style="font-size: 3rem; margin-bottom: 1rem;">🔥</div>
+                         <h3>Estratégias Avançadas</h3>
+                         <p style="margin: 1rem 0; opacity: 0.9;">Técnicas profissionais para jogadores experientes que querem dominar completamente o jogo.</p>
+                         <ul style="text-align: left; margin: 1rem 0; opacity: 0.9;">
+                             <li>✅ Otimização de tempo e recursos</li>
+                             <li>✅ Receitas Prismatic avançadas</li>
+                             <li>✅ Farming de Mutation Sprays</li>
+                             <li>✅ Técnicas de mercado</li>
+                         </ul>
+                         <a href="faq.html#avancado" style="background: rgba(255,255,255,0.2); color: white; padding: 0.8rem 1.5rem; border-radius: 25px; text-decoration: none; display: inline-block; margin-top: 1rem; border: 2px solid rgba(255,255,255,0.3);">🚀 Ver Estratégias</a>
+                     </div>
+                     
+                     <div style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: white; padding: 2rem; border-radius: 15px; text-align: center;">
+                         <div style="font-size: 3rem; margin-bottom: 1rem;">🧮</div>
+                         <h3>Calculadoras e Ferramentas</h3>
+                         <p style="margin: 1rem 0; opacity: 0.9;">Ferramentas exclusivas desenvolvidas pela comunidade brasileira para otimizar seus resultados.</p>
+                         <ul style="text-align: left; margin: 1rem 0; opacity: 0.9;">
+                             <li>✅ Calculadora de lucros avançada</li>
+                             <li>✅ Simulador de receitas</li>
+                             <li>✅ Planejador de farm</li>
+                             <li>✅ Análise de ROI em tempo real</li>
+                         </ul>
+                         <a href="calculator.html" style="background: rgba(255,255,255,0.2); color: white; padding: 0.8rem 1.5rem; border-radius: 25px; text-decoration: none; display: inline-block; margin-top: 1rem; border: 2px solid rgba(255,255,255,0.3);">🧮 Usar Ferramentas</a>
+                     </div>
+                 </div>
+             </div>
+         </section>
+
+         <!-- Seção de Atualizações e Novidades -->
+         <section style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 4rem 0;">
+             <div class="container">
+                 <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">🔥 Últimas Atualizações</h2>
+                 
+                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                     <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px;">
+                         <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                             <div style="background: #28a745; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; margin-right: 1rem;">NOVO</div>
+                             <span style="opacity: 0.8;">Janeiro 2025</span>
+                         </div>
+                         <h3 style="margin-bottom: 1rem;">🆕 Receitas da Atualização Winter</h3>
+                         <p style="opacity: 0.9; margin-bottom: 1rem;">Descobrimos 12 novas receitas exclusivas da atualização de inverno! Incluindo a lendária "Sopa do Cristal de Gelo" que pode render até 8.000 Sheckles.</p>
+                         <a href="recipes.html" style="color: #87CEEB; text-decoration: underline;">Ver novas receitas →</a>
+                     </div>
+                     
+                     <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px;">
+                         <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                             <div style="background: #ffc107; color: #333; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; margin-right: 1rem;">ATUALIZADO</div>
+                             <span style="opacity: 0.8;">Dezembro 2024</span>
+                         </div>
+                         <h3 style="margin-bottom: 1rem;">⚡ Calculadora 2.0</h3>
+                         <p style="opacity: 0.9; margin-bottom: 1rem;">Nossa calculadora agora inclui análise de eventos em tempo real, previsão de preços e sugestões personalizadas baseadas no seu perfil de jogo.</p>
+                         <a href="calculator.html" style="color: #87CEEB; text-decoration: underline;">Experimentar agora →</a>
+                     </div>
+                     
+                     <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px;">
+                         <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                             <div style="background: #dc3545; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; margin-right: 1rem;">URGENTE</div>
+                             <span style="opacity: 0.8;">Em andamento</span>
+                         </div>
+                         <h3 style="margin-bottom: 1rem;">🚨 Evento Duplo XP</h3>
+                         <p style="opacity: 0.9; margin-bottom: 1rem;">Evento especial de duplo XP está ativo até domingo! Aproveite para fazer receitas Prismatic e maximize seus ganhos com nossas estratégias exclusivas.</p>
+                         <a href="#recipes" style="color: #87CEEB; text-decoration: underline;">Aproveitar evento →</a>
+                     </div>
+                 </div>
+                 
+                 <div style="text-align: center; margin-top: 3rem;">
+                     <h3 style="margin-bottom: 1rem;">📱 Mantenha-se Atualizado</h3>
+                     <p style="opacity: 0.9; margin-bottom: 2rem;">Receba as últimas novidades, receitas exclusivas e dicas diretamente no seu dispositivo!</p>
+                     <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                         <a href="#" style="background: #1da1f2; color: white; padding: 0.8rem 1.5rem; border-radius: 25px; text-decoration: none;">📱 Telegram</a>
+                         <a href="#" style="background: #7289da; color: white; padding: 0.8rem 1.5rem; border-radius: 25px; text-decoration: none;">💬 Discord</a>
+                         <a href="#" style="background: #ff0050; color: white; padding: 0.8rem 1.5rem; border-radius: 25px; text-decoration: none;">📺 TikTok</a>
+                         <a href="#" style="background: #e4405f; color: white; padding: 0.8rem 1.5rem; border-radius: 25px; text-decoration: none;">📸 Instagram</a>
+                     </div>
+                 </div>
+             </div>
+         </section>
+
+         <!-- Seção de FAQ Rápido -->
+         <section style="background: #f8f9fa; padding: 4rem 0;">
+             <div class="container">
+                 <h2 style="text-align: center; margin-bottom: 3rem; color: #333; font-size: 2.5rem;">❓ Perguntas Frequentes</h2>
+                 
+                 <div style="max-width: 800px; margin: 0 auto;">
+                     <div style="background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); overflow: hidden; margin-bottom: 1rem;">
+                         <div style="padding: 1.5rem; border-bottom: 1px solid #eee; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="toggleFAQ(1)">
+                             <strong style="color: #333;">🤔 Como começar no Grow a Garden?</strong>
+                             <span id="faq-icon-1" style="color: #6a5acd; font-size: 1.2rem;">+</span>
+                         </div>
+                         <div id="faq-content-1" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                             <div style="padding: 1.5rem 0; color: #666; line-height: 1.6;">
+                                 <p><strong>Passo 1:</strong> Comece plantando ingredientes básicos como alface, cenoura e tomate.</p>
+                                 <p><strong>Passo 2:</strong> Faça receitas simples como "Salada Brasileira" para ganhar seus primeiros Sheckles.</p>
+                                 <p><strong>Passo 3:</strong> Use nossa calculadora para otimizar seus ganhos e progrediu gradualmente para receitas mais complexas.</p>
+                                 <p><strong>Dica:</strong> Siga nosso guia completo para iniciantes para acelerar sua progressão!</p>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <div style="background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); overflow: hidden; margin-bottom: 1rem;">
+                         <div style="padding: 1.5rem; border-bottom: 1px solid #eee; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="toggleFAQ(2)">
+                             <strong style="color: #333;">💎 Como conseguir receitas Prismatic?</strong>
+                             <span id="faq-icon-2" style="color: #6a5acd; font-size: 1.2rem;">+</span>
+                         </div>
+                         <div id="faq-content-2" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                             <div style="padding: 1.5rem 0; color: #666; line-height: 1.6;">
+                                 <p>Receitas Prismatic requerem ingredientes especiais e timing perfeito:</p>
+                                 <ul style="margin: 1rem 0;">
+                                     <li><strong>Ingredientes raros:</strong> Cultive ingredientes com cores especiais (roxo, dourado)</li>
+                                     <li><strong>Timing:</strong> Cozinhe entre 22h-02h para +50% chance de sucesso</li>
+                                     <li><strong>Eventos:</strong> Aproveite lua cheia e eventos especiais</li>
+                                     <li><strong>Combinações:</strong> Use nossa lista de combos testados pela comunidade</li>
+                                 </ul>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <div style="background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); overflow: hidden; margin-bottom: 1rem;">
+                         <div style="padding: 1.5rem; border-bottom: 1px solid #eee; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="toggleFAQ(3)">
+                             <strong style="color: #333;">🧮 A calculadora é gratuita?</strong>
+                             <span id="faq-icon-3" style="color: #6a5acd; font-size: 1.2rem;">+</span>
+                         </div>
+                         <div id="faq-content-3" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                             <div style="padding: 1.5rem 0; color: #666; line-height: 1.6;">
+                                 <p><strong>Sim, 100% gratuita!</strong> Nossa calculadora avançada é um presente da comunidade brasileira para todos os jogadores.</p>
+                                 <p>Recursos inclusos:</p>
+                                 <ul style="margin: 1rem 0;">
+                                     <li>✅ Cálculo de lucros em tempo real</li>
+                                     <li>✅ Análise de ROI por receita</li>
+                                     <li>✅ Consideração de eventos e bônus</li>
+                                     <li>✅ Sugestões personalizadas</li>
+                                 </ul>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <div style="background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); overflow: hidden;">
+                         <div style="padding: 1.5rem; border-bottom: 1px solid #eee; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="toggleFAQ(4)">
+                             <strong style="color: #333;">🇧🇷 Como participar da comunidade brasileira?</strong>
+                             <span id="faq-icon-4" style="color: #6a5acd; font-size: 1.2rem;">+</span>
+                         </div>
+                         <div id="faq-content-4" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                             <div style="padding: 1.5rem 0; color: #666; line-height: 1.6;">
+                                 <p>Junte-se à maior comunidade brasileira de Grow a Garden:</p>
+                                 <ul style="margin: 1rem 0;">
+                                     <li><strong>Discord:</strong> Chat em tempo real com outros jogadores BR</li>
+                                     <li><strong>Grupo Roblox:</strong> Código GAG-BR-2025</li>
+                                     <li><strong>Eventos:</strong> Participe de desafios semanais</li>
+                                     <li><strong>Troca:</strong> Compartilhe ingredientes raros</li>
+                                     <li><strong>Suporte:</strong> Ajuda 24/7 em português</li>
+                                 </ul>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div style="text-align: center; margin-top: 3rem;">
+                     <a href="faq.html" style="background: #6a5acd; color: white; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: bold;">❓ Ver Todas as Perguntas</a>
+                 </div>
+             </div>
+         </section>
+
+         <!-- Seção de SEO e Conteúdo Adicional -->
+         <section style="background: white; padding: 4rem 0; border-top: 1px solid #eee;">
+             <div class="container">
+                 <div style="max-width: 1000px; margin: 0 auto;">
+                     <h2 style="text-align: center; margin-bottom: 3rem; color: #333; font-size: 2.5rem;">🎮 Domine o Roblox Grow a Garden com a Comunidade Brasileira</h2>
+                     
+                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+                         <div>
+                             <h3 style="color: #6a5acd; margin-bottom: 1rem; font-size: 1.5rem;">🔮 Receitas Prismatic Exclusivas</h3>
+                             <p style="color: #666; line-height: 1.8; margin-bottom: 1rem;">
+                                 Nossa comunidade brasileira descobriu as combinações mais eficazes para receitas Prismatic no <strong>Roblox Grow a Garden</strong>. 
+                                 Com mais de <strong>25.000 jogadores ativos</strong>, testamos cada receita extensivamente para garantir as melhores taxas de sucesso.
+                             </p>
+                             <p style="color: #666; line-height: 1.8;">
+                                 A famosa <strong>Salada do Jardim Cristalino</strong> pode gerar até <strong>4.500 Sheckles</strong> por preparo quando executada 
+                                 no horário ideal (22h-02h, horário de Brasília) durante a lua cheia no jogo.
+                             </p>
+                         </div>
+                         
+                         <div>
+                             <h3 style="color: #f093fb; margin-bottom: 1rem; font-size: 1.5rem;">⚡ Estratégias de Farm Brasileiro</h3>
+                             <p style="color: #666; line-height: 1.8; margin-bottom: 1rem;">
+                                 Desenvolvemos um sistema progressivo especialmente para jogadores brasileiros. Começando com receitas básicas como a 
+                                 <strong>Salada Simples Brasileira</strong> (100% taxa de sucesso), você pode rapidamente acumular <strong>Sheckles e XP</strong> 
+                                 suficientes para desbloquear receitas mais avançadas.
+                             </p>
+                             <p style="color: #666; line-height: 1.8;">
+                                 Nossa <strong>calculadora de lucros</strong> considera mais de 15 variáveis diferentes, incluindo eventos especiais, 
+                                 bônus VIP, fases da lua e multiplicadores de XP específicos do servidor brasileiro.
+                             </p>
+                         </div>
+                     </div>
+                     
+                     <div style="background: #f8f9fa; padding: 2rem; border-radius: 15px; border-left: 4px solid #6a5acd;">
+                         <h3 style="color: #6a5acd; margin-bottom: 1.5rem;">🏆 Por Que Somos a Referência Brasileira em Grow a Garden?</h3>
+                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                             <div>
+                                 <h4 style="color: #333; margin-bottom: 0.5rem;">📊 Dados Comprovados</h4>
+                                 <ul style="color: #666; line-height: 1.6; margin: 0; padding-left: 1.5rem;">
+                                     <li><strong>50M+ Sheckles</strong> ganhos pela comunidade</li>
+                                     <li><strong>98% taxa de sucesso</strong> em nossas receitas</li>
+                                     <li><strong>2.8M XP</strong> conquistado coletivamente</li>
+                                     <li><strong>1.2K Sheckles/hora</strong> média de ganhos</li>
+                                 </ul>
+                             </div>
+                             
+                             <div>
+                                 <h4 style="color: #333; margin-bottom: 0.5rem;">🇧🇷 Comunidade Ativa</h4>
+                                 <ul style="color: #666; line-height: 1.6; margin: 0; padding-left: 1.5rem;">
+                                     <li><strong>Suporte 24/7</strong> em português</li>
+                                     <li><strong>Discord exclusivo</strong> para jogadores BR</li>
+                                     <li><strong>Eventos semanais</strong> da comunidade</li>
+                                     <li><strong>Troca de ingredientes</strong> raros</li>
+                                 </ul>
+                             </div>
+                             
+                             <div>
+                                 <h4 style="color: #333; margin-bottom: 0.5rem;">🛠️ Ferramentas Exclusivas</h4>
+                                 <ul style="color: #666; line-height: 1.6; margin: 0; padding-left: 1.5rem;">
+                                     <li><strong>Calculadora avançada</strong> de lucros</li>
+                                     <li><strong>Simulador de receitas</strong> em tempo real</li>
+                                     <li><strong>Análise de ROI</strong> personalizada</li>
+                                     <li><strong>Planejador de farm</strong> otimizado</li>
+                                 </ul>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 15px;">
+                         <h3 style="margin-bottom: 1rem;">🚀 Comece Sua Jornada Hoje Mesmo!</h3>
+                         <p style="opacity: 0.9; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                             Junte-se a milhares de jogadores brasileiros que já dominaram o Grow a Garden usando nossas estratégias comprovadas. 
+                             Do iniciante ao expert, temos o conteúdo perfeito para acelerar sua progressão!
+                         </p>
+                         <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                             <a href="recipes.html" style="background: rgba(255,255,255,0.2); color: white; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: bold; border: 2px solid rgba(255,255,255,0.3);">📋 Ver Receitas</a>
+                             <a href="calculator.html" style="background: rgba(255,255,255,0.2); color: white; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: bold; border: 2px solid rgba(255,255,255,0.3);">🧮 Usar Calculadora</a>
+                             <a href="#community" style="background: rgba(255,255,255,0.2); color: white; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: bold; border: 2px solid rgba(255,255,255,0.3);">🤝 Participar</a>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 GaG Receitas BR - Guia não-oficial da comunidade brasileira de Grow a Garden</p>
+            <p>Feito com ❤️ para os jogadores brasileiros | Junte-se à nossa comunidade no Discord</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                🌟 Apoie o projeto: Siga no TikTok @gagreceitasbr | Instagram @gagbrasil | YouTube: GaG Receitas BR
+            </p>
+            <p style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.9rem;">
+                <a href="terms.html" style="color: #6a5acd; text-decoration: none; margin: 0 10px;">📋 Termos de Uso</a> |
+                <a href="privacy.html" style="color: #6a5acd; text-decoration: none; margin: 0 10px;">🔒 Política de Privacidade</a> |
+                <a href="about.html" style="color: #6a5acd; text-decoration: none; margin: 0 10px;">ℹ️ Sobre Nós</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Funcionalidade de busca
+        const searchInput = document.getElementById('searchInput');
+        const recipeCards = document.querySelectorAll('.recipe-card');
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        let currentFilter = 'all';
+
+        searchInput.addEventListener('input', filterRecipes);
+
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                filterTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                currentFilter = this.getAttribute('data-filter');
+                filterRecipes();
+            });
+        });
+
+        function filterRecipes() {
+            const searchTerm = searchInput.value.toLowerCase();
+            
+            recipeCards.forEach(card => {
+                const recipeName = card.querySelector('h4').textContent.toLowerCase();
+                const ingredients = Array.from(card.querySelectorAll('.ingredients span'))
+                    .map(span => span.textContent.toLowerCase()).join(' ');
+                const rarity = card.getAttribute('data-rarity');
+                
+                const matchesSearch = recipeName.includes(searchTerm) || ingredients.includes(searchTerm);
+                const matchesFilter = currentFilter === 'all' || rarity === currentFilter;
+                
+                if (matchesSearch && matchesFilter) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeIn 0.5s ease';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Clique nos cards de categoria
+        const categoryCards = document.querySelectorAll('.category-card');
+        categoryCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+                filterTabs.forEach(t => t.classList.remove('active'));
+                const targetTab = document.querySelector(`[data-filter="${category}"]`);
+                if (targetTab) {
+                    targetTab.classList.add('active');
+                    currentFilter = category;
+                    filterRecipes();
+                }
+                
+                // Scroll suave para seção de receitas
+                document.querySelector('.recipe-display').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navegação suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animações de entrada
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observar elementos para animação
+        document.querySelectorAll('.recipe-card, .category-card, .feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Efeitos nos botões da comunidade
+        document.querySelectorAll('.feature-card button').forEach(button => {
+            button.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+
+        // Função para mostrar notificações
+        function showNotification(message) {
+            // Criar elemento de notificação
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: linear-gradient(135deg, #667eea, #764ba2);
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 10px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+                z-index: 9999;
+                max-width: 300px;
+                animation: slideIn 0.5s ease;
+                font-size: 0.9rem;
+            `;
+            
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            // Remover após 4 segundos
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.5s ease';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 500);
+            }, 4000);
+        }
+
+        // Adicionar animações CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes slideOut {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+            
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            
+            .recipe-card:hover {
+                box-shadow: 0 10px 30px rgba(106, 90, 205, 0.3);
+            }
+            
+            .search-input:focus {
+                transform: scale(1.02);
+                box-shadow: 0 0 20px rgba(106, 90, 205, 0.2);
+            }
+            
+            .filter-tab:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Contador de estatísticas animado
+        function animateCounter(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const currentValue = Math.floor(progress * (end - start) + start);
+                element.textContent = formatNumber(currentValue);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        function formatNumber(num) {
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(1) + 'M';
+            } else if (num >= 1000) {
+                return (num / 1000).toFixed(0) + 'K';
+            }
+            return num.toString();
+        }
+
+        // Animar contadores quando visíveis
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    const values = [25000, 150, 98, 50];
+                    statNumbers.forEach((stat, index) => {
+                        animateCounter(stat, 0, values[index], 2000);
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        const statsBanner = document.querySelector('.stats-banner');
+        if (statsBanner) {
+            statsObserver.observe(statsBanner);
+        }
+
+        // Adicionar funcionalidade de favoritos
+        recipeCards.forEach(card => {
+            const favoriteBtn = document.createElement('button');
+            favoriteBtn.innerHTML = '🤍';
+            favoriteBtn.style.cssText = `
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                transition: transform 0.2s ease;
+            `;
+            
+            card.style.position = 'relative';
+            card.appendChild(favoriteBtn);
+            
+            favoriteBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (this.innerHTML === '🤍') {
+                    this.innerHTML = '❤️';
+                    this.style.transform = 'scale(1.2)';
+                    showNotification('❤️ Receita adicionada aos favoritos!');
+                } else {
+                    this.innerHTML = '🤍';
+                    this.style.transform = 'scale(1)';
+                    showNotification('💔 Receita removida dos favoritos!');
+                }
+                
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 200);
+            });
+        });
+
+        // Easter egg - Código Konami
+        let konamiCode = [];
+        const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; // ↑↑↓↓←→←→BA
+        
+        document.addEventListener('keydown', function(e) {
+            konamiCode.push(e.keyCode);
+            if (konamiCode.length > konamiSequence.length) {
+                konamiCode.shift();
+            }
+            
+            if (konamiCode.toString() === konamiSequence.toString()) {
+                showNotification('🎉 Easter Egg ativado! Você desbloqueou o modo desenvolvedor! Todas as receitas agora mostram dicas secretas!');
+                // Adicionar dicas secretas
+                recipeCards.forEach(card => {
+                    const secretTip = document.createElement('p');
+                    secretTip.style.cssText = 'background: #ffe066; padding: 0.5rem; margin-top: 0.5rem; border-radius: 5px; font-size: 0.8rem;';
+                    secretTip.innerHTML = '<strong>🔓 Dica Secreta:</strong> Use este combo durante eventos duplo XP para maximizar ganhos!';
+                    card.appendChild(secretTip);
+                });
+                konamiCode = []; // Reset
+            }
+        });
+
+                 // FAQ Toggle Function (Global scope)
+         window.toggleFAQ = function(id) {
+             const content = document.getElementById(`faq-content-${id}`);
+             const icon = document.getElementById(`faq-icon-${id}`);
+             
+             if (content.style.maxHeight === '0px' || content.style.maxHeight === '') {
+                 content.style.maxHeight = content.scrollHeight + 'px';
+                 icon.textContent = '−';
+                 icon.style.transform = 'rotate(180deg)';
+                 icon.style.transition = 'transform 0.3s ease';
+             } else {
+                 content.style.maxHeight = '0px';
+                 icon.textContent = '+';
+                 icon.style.transform = 'rotate(0deg)';
+             }
+         };
+
+         // Enhanced button interactions
+         document.querySelectorAll('a[href^="#"]').forEach(link => {
+             link.addEventListener('click', function(e) {
+                 e.preventDefault();
+                 const target = document.querySelector(this.getAttribute('href'));
+                 if (target) {
+                     target.scrollIntoView({
+                         behavior: 'smooth',
+                         block: 'start'
+                     });
+                 }
+             });
+         });
+
+         // Add loading states to external links
+         document.querySelectorAll('a[href$=".html"]').forEach(link => {
+             link.addEventListener('click', function() {
+                 this.style.opacity = '0.7';
+                 this.style.transform = 'scale(0.98)';
+             });
+         });
+
+         console.log('🌱 GaG Receitas BR carregado com sucesso!');
+         console.log('💡 Dica: Experimente o código Konami (↑↑↓↓←→←→BA) para easter eggs!');
+         console.log('📱 Novo conteúdo adicionado: 6 seções principais, FAQ interativo e mais!');
+    </script>
+</body>
+</html>

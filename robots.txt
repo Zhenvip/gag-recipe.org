@@ -1,0 +1,113 @@
+# robots.txt para GaG Receitas BR - Grow a Garden Community
+
+# Regras gerais para todos os bots
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /404
+Disallow: /500
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://gag-recipe.org/sitemap.xml
+
+# Regras específicas para bots de IA - Acesso limitado
+User-agent: GPTBot
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: anthropic-ai
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: Claude-Web
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: PerplexityBot
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: GoogleOther
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: DuckAssistBot
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: ChatGPT-User
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: CCBot
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: Baiduspider
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: facebookexternalhit
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Regras específicas para Googlebot (busca tradicional)
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /404
+Disallow: /500
+Disallow: /*.json$
+
+# Permitir acesso aos conteúdos importantes para IA
+Allow: /recipes/
+Allow: /calculator/
+Allow: /faq/
+Allow: /about/
+Allow: /terms/
+Allow: /privacy/
+Allow: /legal/
+
+# Não permitir acesso a conteúdos privados
+Disallow: /user-content/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Crawl delay para não sobrecarregar o servidor
+Crawl-delay: 1

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GaG Receitas BR - Gerador de Imagens Placeholder</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        h1 {
+            color: #6a5acd;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .placeholder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .placeholder-item {
+            border: 2px dashed #6a5acd;
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .placeholder-item:hover {
+            background: #f8f9fa;
+            border-color: #764ba2;
+        }
+        
+        .placeholder-preview {
+            width: 100%;
+            max-width: 300px;
+            height: 157px; /* 1200:630 ratio */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin: 0 auto 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .placeholder-preview::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            pointer-events: none;
+        }
+        
+        .placeholder-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            z-index: 1;
+        }
+        
+        .placeholder-subtitle {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            z-index: 1;
+        }
+        
+        .placeholder-specs {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        
+        .logo-placeholder {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            margin: 0 auto 1rem;
+        }
+        
+        .download-info {
+            background: #e8f5e8;
+            border-left: 4px solid #28a745;
+            padding: 1rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        
+        .color-palette {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        
+        .color-swatch {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 GaG Receitas BR - Gerador de Imagens Placeholder</h1>
+        
+        <div class="download-info">
+            <strong>📋 Como usar:</strong> Esta página mostra exemplos visuais das imagens necessárias para o site. 
+            Use essas especificações para criar as imagens reais com ferramentas como Canva, Photoshop ou Figma.
+        </div>
+        
+        <h2>🌐 Open Graph Images (1200x630px)</h2>
+        <div class="placeholder-grid">
+            <div class="placeholder-item">
+                <div class="placeholder-preview">
+                    <div class="placeholder-title">🌱 GaG Receitas BR</div>
+                    <div class="placeholder-subtitle">Guia Completo Grow a Garden</div>
+                    <div class="placeholder-subtitle">25.000+ Jogadores Brasileiros</div>
+                </div>
+                <h3>og-home.jpg</h3>
+                <div class="placeholder-specs">1200x630px • Página Inicial</div>
+            </div>
+            
+            <div class="placeholder-item">
+                <div class="placeholder-preview" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="placeholder-title">📋 150+ Receitas</div>
+                    <div class="placeholder-subtitle">Prismatic • Transcendent</div>
+                    <div class="placeholder-subtitle">🔮💎🌟⚡</div>
+                </div>
+                <h3>og-recipes.jpg</h3>
+                <div class="placeholder-specs">1200x630px • Receitas</div>
+            </div>
+            
+            <div class="placeholder-item">
+                <div class="placeholder-preview" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <div class="placeholder-title">🧮 Calculadora</div>
+                    <div class="placeholder-subtitle">Otimize seus Sheckles</div>
+                    <div class="placeholder-subtitle">📊 Análise Avançada</div>
+                </div>
+                <h3>og-calculator.jpg</h3>
+                <div class="placeholder-specs">1200x630px • Calculadora</div>
+            </div>
+            
+            <div class="placeholder-item">
+                <div class="placeholder-preview" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                    <div class="placeholder-title">❓ FAQ</div>
+                    <div class="placeholder-subtitle">Perguntas Frequentes</div>
+                    <div class="placeholder-subtitle">Suporte 24/7</div>
+                </div>
+                <h3>og-faq.jpg</h3>
+                <div class="placeholder-specs">1200x630px • FAQ</div>
+            </div>
+            
+            <div class="placeholder-item">
+                <div class="placeholder-preview" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="placeholder-title">🇧🇷 Equipe BR</div>
+                    <div class="placeholder-subtitle">GaG Receitas BR</div>
+                    <div class="placeholder-subtitle">Comunidade Brasileira</div>
+                </div>
+                <h3>og-about.jpg</h3>
+                <div class="placeholder-specs">1200x630px • Sobre Nós</div>
+            </div>
+        </div>
+        
+        <h2>🏷️ Logo e Ícones</h2>
+        <div class="placeholder-grid">
+            <div class="placeholder-item">
+                <div class="logo-placeholder">🌱</div>
+                <h3>logo.png</h3>
+                <div class="placeholder-specs">200x200px • PNG transparente</div>
+            </div>
+            
+            <div class="placeholder-item">
+                <div style="width: 64px; height: 64px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin: 0 auto 1rem;">🌱</div>
+                <h3>favicon.ico</h3>
+                <div class="placeholder-specs">32x32px • ICO multi-size</div>
+            </div>
+        </div>
+        
+        <h2>🎨 Paleta de Cores</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background: #6a5acd;" title="#6a5acd - Primary"></div>
+            <div class="color-swatch" style="background: #667eea;" title="#667eea - Secondary"></div>
+            <div class="color-swatch" style="background: #764ba2;" title="#764ba2 - Accent"></div>
+            <div class="color-swatch" style="background: #28a745;" title="#28a745 - Success"></div>
+            <div class="color-swatch" style="background: #ffc107;" title="#ffc107 - Warning"></div>
+            <div class="color-swatch" style="background: #dc3545;" title="#dc3545 - Danger"></div>
+        </div>
+        
+        <div class="download-info">
+            <h3>📥 Próximos Passos:</h3>
+            <ol>
+                <li><strong>Escolha uma ferramenta:</strong> Canva (fácil), Figma (gratuito), ou Photoshop (profissional)</li>
+                <li><strong>Crie as Open Graph images primeiro</strong> - são as mais importantes para SEO</li>
+                <li><strong>Use as cores e estilos</strong> mostrados acima para manter consistência</li>
+                <li><strong>Salve as imagens</strong> na pasta <code>/image/</code> com os nomes exatos</li>
+                <li><strong>Otimize o tamanho</strong> - mantenha abaixo de 300KB cada</li>
+                <li><strong>Teste as imagens</strong> nas redes sociais para verificar como aparecem</li>
+            </ol>
+        </div>
+        
+        <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; margin: 2rem 0; border-radius: 5px;">
+            <strong>💡 Dica:</strong> Para criar rapidamente imagens placeholder temporárias, você pode usar serviços como:
+            <ul style="margin-top: 0.5rem;">
+                <li><strong>Placeholder.com:</strong> https://via.placeholder.com/1200x630/667eea/ffffff?text=GaG+Receitas+BR</li>
+                <li><strong>Canva:</strong> Templates prontos para Open Graph</li>
+                <li><strong>Figma Community:</strong> Templates gratuitos de redes sociais</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        // Adicionar interatividade aos placeholders
+        document.querySelectorAll('.placeholder-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const title = this.querySelector('h3').textContent;
+                const specs = this.querySelector('.placeholder-specs').textContent;
+                alert(`📋 Especificações para ${title}:\n\n${specs}\n\nUse essas dimensões para criar a imagem real.`);
+            });
+        });
+        
+        console.log('🎨 GaG Receitas BR - Gerador de Placeholder carregado!');
+    </script>
+</body>
+</html>
+

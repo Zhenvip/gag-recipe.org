@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - GaG Receitas BR | Comunidade Grow a Garden Brasil</title>
+    <meta name="description" content="Conheça a equipe por trás do maior guia brasileiro de Roblox Grow a Garden. Nossa missão, história e como contribuir para a comunidade GaG BR.">
+    <meta name="keywords" content="sobre GaG Receitas BR, equipe, comunidade brasileira, Grow a Garden Brasil, contato, missão">
+    
+    <!-- Analytics Scripts -->
+    <script defer data-domain="gag-recipe.org" src="https://click.pageview.click/js/script.js"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K69S0867R5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K69S0867R5');
+    </script>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gag-recipe.org/about.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Sobre Nós - GaG Receitas BR | Comunidade Grow a Garden Brasil">
+    <meta property="og:description" content="Conheça a história, missão e equipe por trás do maior guia brasileiro de Roblox Grow a Garden. Nossa comunidade de 25.000+ jogadores!">
+    <meta property="og:image" content="https://gag-recipe.org/image/og-about.jpg">
+    <meta property="og:url" content="https://gag-recipe.org/about.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GaG Receitas BR">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sobre Nós - GaG Receitas BR">
+    <meta name="twitter:description" content="Conheça a equipe e missão por trás do maior guia brasileiro de Roblox Grow a Garden. Comunidade de 25.000+ jogadores!">
+    <meta name="twitter:image" content="https://gag-recipe.org/image/og-about.jpg">
+    <meta name="twitter:site" content="@GaGReceitasBR">
+    
+    <!-- Favicon and Logo -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "Sobre Nós - GaG Receitas BR",
+        "description": "Conheça a equipe e missão do GaG Receitas BR",
+        "url": "https://gag-recipe.org/about.html",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "GaG Receitas BR",
+            "description": "Comunidade brasileira dedicada ao Roblox Grow a Garden",
+            "foundingDate": "2024",
+            "location": "Brasil",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "availableLanguage": "Portuguese"
+            }
+        }
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #6a5acd;
+            --secondary-color: #667eea;
+            --accent-color: #764ba2;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+            --info-color: #17a2b8;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --dark: #333333;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --border-radius: 15px;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light-bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a.active,
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a.active::after,
+        .nav-menu a:hover::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 80px;
+            padding: 2rem 0;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Mission Section */
+        .mission-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--white) 0%, #f8f9fa 100%);
+            position: relative;
+        }
+
+        .mission-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, var(--primary-color) 50%, transparent 100%);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-weight: 800;
+            position: relative;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3.5rem;
+            margin-top: 3rem;
+        }
+
+        .mission-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .mission-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .mission-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .mission-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 4rem 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .team-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin: 0 auto 1rem;
+            color: white;
+        }
+
+        .team-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-role {
+            color: #666;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .team-description {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            color: white;
+            padding: 4rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 4rem 0;
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            background: var(--light-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .contact-link {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .contact-link:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* Legal Section */
+        .legal-section {
+            padding: 4rem 0;
+        }
+
+        .legal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .legal-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .legal-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .legal-card p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .legal-card ul {
+            color: #666;
+            margin-left: 1.5rem;
+        }
+
+        .legal-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Support Section */
+        .support-section {
+            background: var(--light-bg);
+            padding: 4rem 0;
+        }
+
+        .support-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .support-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .support-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .support-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .support-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .support-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .support-btn {
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .support-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mission-grid,
+            .team-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .legal-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .team-card,
+            .contact-card,
+            .legal-card {
+                padding: 1.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="GaG Receitas BR Logo">
+                GaG Receitas BR
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="recipes.html">Receitas</a></li>
+                <li><a href="calculator.html">Calculadora</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html" class="active">Sobre Nós</a></li>
+            </ul>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                ☰
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <!-- Breadcrumb Navigation -->
+                <nav aria-label="breadcrumb" style="margin-bottom: 2rem;">
+                    <ol style="display: flex; list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.8);">
+                        <li><a href="index.html" style="color: rgba(255,255,255,0.8); text-decoration: none;">🏠 Início</a></li>
+                        <li style="margin: 0 0.5rem;">›</li>
+                        <li style="color: white; font-weight: 500;">🇧🇷 Sobre Nós</li>
+                    </ol>
+                </nav>
+                
+                <h1>🇧🇷 Sobre o GaG Receitas BR</h1>
+                <p>Conheça a história, missão e equipe por trás do maior guia brasileiro de Roblox Grow a Garden!</p>
+            </div>
+        </section>
+
+        <section class="mission-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>🎯 Nossa Missão</h2>
+                </div>
+                
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <span class="mission-icon">🌱</span>
+                        <h3>Cultivar Conhecimento</h3>
+                        <p>Nosso objetivo é ser a fonte mais confiável e completa de informações sobre Grow a Garden em português, ajudando jogadores brasileiros a dominarem o jogo.</p>
+                    </div>
+
+                    <div class="mission-card">
+                        <span class="mission-icon">🤝</span>
+                        <h3>Construir Comunidade</h3>
+                        <p>Criamos um espaço onde jogadores brasileiros podem compartilhar experiências, dicas e estratégias, fortalecendo nossa comunidade nacional no Roblox.</p>
+                    </div>
+
+                    <div class="mission-card">
+                        <span class="mission-icon">📈</span>
+                        <h3>Otimizar Resultados</h3>
+                        <p>Fornecemos ferramentas avançadas como calculadoras e análises detalhadas para que cada jogador maximize seus ganhos e diversão no jogo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container">
+                <div class="section-header" style="color: white;">
+                    <h2 style="color: white;">📊 Nosso Impacto</h2>
+                    <p style="color: rgba(255,255,255,0.9);">Números que mostram o crescimento da nossa comunidade</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">25.000+</span>
+                        <span class="stat-label">Jogadores Atendidos</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Receitas Documentadas</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">50M+</span>
+                        <span class="stat-label">Sheckles Ganhos pela Comunidade</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Taxa de Satisfação</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Suporte Disponível</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">365</span>
+                        <span class="stat-label">Dias por Ano Online</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>👥 Nossa Equipe</h2>
+                    <p>Conheça as pessoas dedicadas que tornam este projeto possível</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-avatar">🧑‍💻</div>
+                        <h3>Carlos "CookMaster" Silva</h3>
+                        <div class="team-role">Fundador & Desenvolvedor Principal</div>
+                        <p class="team-description">Jogador veterano de GaG com mais de 3 anos de experiência. Responsável pelo desenvolvimento do site e criação das ferramentas de cálculo. Especialista em receitas Prismatic.</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar">📊</div>
+                        <h3>Ana "DataChef" Santos</h3>
+                        <div class="team-role">Analista de Dados & Estrategista</div>
+                        <p class="team-description">Especialista em análise de dados do jogo e otimização de estratégias. Responsável pelas estatísticas em tempo real e pela calculadora avançada de lucros.</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar">🎨</div>
+                        <h3>Rafael "DesignGamer" Costa</h3>
+                        <div class="team-role">Designer UI/UX</div>
+                        <p class="team-description">Responsável pelo design intuitivo e responsivo do site. Garante que a experiência do usuário seja sempre a melhor possível em todos os dispositivos.</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar">📝</div>
+                        <h3>Mariana "ContentQueen" Oliveira</h3>
+                        <div class="team-role">Criadora de Conteúdo</div>
+                        <p class="team-description">Testadora oficial de receitas e criadora de guias detalhados. Mantém todo o conteúdo atualizado e escreve as melhores dicas para a comunidade.</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar">🛠️</div>
+                        <h3>João "TechSupport" Ferreira</h3>
+                        <div class="team-role">Suporte Técnico</div>
+                        <p class="team-description">Responsável pelo suporte à comunidade e manutenção técnica do site. Sempre disponível para ajudar jogadores com dúvidas e problemas técnicos.</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar">🌟</div>
+                        <h3>Comunidade GaG BR</h3>
+                        <div class="team-role">Contribuidores Voluntários</div>
+                        <p class="team-description">Centenas de jogadores brasileiros que contribuem diariamente com testes, feedback, sugestões e relatórios de bugs. Vocês são o coração do nosso projeto!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem; color: #333; font-size: 2.5rem;">📞 Entre em Contato</h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>💬 Discord Oficial</h3>
+                        <p>Junte-se à nossa comunidade no Discord para chat em tempo real, eventos exclusivos e suporte direto da equipe.</p>
+                        <a href="#discord" class="contact-link">Entrar no Discord</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>📧 Email de Suporte</h3>
+                        <p>Para questões técnicas, sugestões de melhorias ou parcerias, entre em contato através do nosso email oficial.</p>
+                        <a href="mailto:contato@gag-receitas.com.br" class="contact-link">Enviar Email</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>🐛 Reportar Bugs</h3>
+                        <p>Encontrou algum problema no site ou nas receitas? Nos ajude a melhorar reportando bugs e inconsistências.</p>
+                        <a href="#bug-report" class="contact-link">Reportar Bug</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>💡 Sugestões</h3>
+                        <p>Tem uma ideia para melhorar o site ou quer sugerir uma nova funcionalidade? Adoraríamos ouvir sua opinião!</p>
+                        <a href="#suggestions" class="contact-link">Enviar Sugestão</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="support-section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem; color: #333; font-size: 2.5rem;">🤝 Como Nos Apoiar</h2>
+                <p style="text-align: center; color: #666; margin-bottom: 2rem;">Este projeto é mantido pela comunidade, para a comunidade. Veja como você pode contribuir:</p>
+                
+                <div class="support-cards">
+                    <div class="support-card">
+                        <span class="support-icon">🔄</span>
+                        <h3>Compartilhe</h3>
+                        <p>Divulgue nosso site para outros jogadores brasileiros de GaG. Quanto maior nossa comunidade, melhor para todos!</p>
+                        <a href="#share" class="support-btn">Compartilhar</a>
+                    </div>
+
+                    <div class="support-card">
+                        <span class="support-icon">🧪</span>
+                        <h3>Teste Receitas</h3>
+                        <p>Ajude-nos testando novas receitas e reportando resultados. Sua contribuição torna nossos dados mais precisos.</p>
+                        <a href="#test" class="support-btn">Participar</a>
+                    </div>
+
+                    <div class="support-card">
+                        <span class="support-icon">📝</span>
+                        <h3>Contribua com Conteúdo</h3>
+                        <p>Escreva guias, dicas ou tutoriais. Jogadores experientes podem ajudar iniciantes compartilhando conhecimento.</p>
+                        <a href="#contribute" class="support-btn">Contribuir</a>
+                    </div>
+
+                    <div class="support-card">
+                        <span class="support-icon">☕</span>
+                        <h3>Apoio Financeiro</h3>
+                        <p>Ajude-nos a manter o servidor online e desenvolver novas funcionalidades com uma contribuição voluntária.</p>
+                        <a href="#donate" class="support-btn">Apoiar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="legal-section" id="terms">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem; color: #333; font-size: 2.5rem;">⚖️ Termos Legais</h2>
+                
+                <div class="legal-grid">
+                    <div class="legal-card">
+                        <h3>📋 Termos de Uso</h3>
+                        <p>Ao usar nosso site, você concorda com os seguintes termos:</p>
+                        <ul>
+                            <li>O site é fornecido "como está" sem garantias</li>
+                            <li>Não somos afiliados ao Roblox Corporation</li>
+                            <li>O conteúdo é para fins educacionais e de entretenimento</li>
+                            <li>Não nos responsabilizamos por perdas no jogo</li>
+                            <li>Reservamos o direito de modificar o conteúdo a qualquer momento</li>
+                            <li>É proibido usar nosso conteúdo para fins comerciais sem autorização</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-card" id="privacy">
+                        <h3>🔒 Política de Privacidade</h3>
+                        <p>Respeitamos sua privacidade e protegemos seus dados:</p>
+                        <ul>
+                            <li>Não coletamos informações pessoais identificáveis</li>
+                            <li>Usamos cookies apenas para melhorar a experiência</li>
+                            <li>Dados de uso são anônimos e agregados</li>
+                            <li>Não vendemos ou compartilhamos dados com terceiros</li>
+                            <li>Você pode limpar cookies a qualquer momento</li>
+                            <li>Dados de favoritos são armazenados localmente no seu dispositivo</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-card">
+                        <h3>⚠️ Isenção de Responsabilidade</h3>
+                        <p>Informações importantes sobre o uso de nossos serviços:</p>
+                        <ul>
+                            <li>Este é um projeto não-oficial da comunidade</li>
+                            <li>Receitas e estratégias podem não funcionar 100% das vezes</li>
+                            <li>O jogo pode ser atualizado e alterar mecânicas</li>
+                            <li>Não garantimos lucros ou resultados específicos</li>
+                            <li>Use as informações por sua própria conta e risco</li>
+                            <li>Recomendamos sempre fazer backup de itens valiosos</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-card">
+                        <h3>🎮 Sobre o Roblox</h3>
+                        <p>Relacionamento com a plataforma oficial:</p>
+                        <ul>
+                            <li>Roblox® é marca registrada da Roblox Corporation</li>
+                            <li>Grow a Garden é um jogo criado por desenvolvedores independentes</li>
+                            <li>Este site não é afiliado, endossado ou patrocinado pelo Roblox</li>
+                            <li>Respeitamos todos os termos de serviço do Roblox</li>
+                            <li>Encorajamos o jogo justo e seguir as regras da plataforma</li>
+                            <li>Reportamos comportamentos inadequados quando necessário</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Navegação</h4>
+                    <a href="index.html">Início</a>
+                    <a href="recipes.html">Receitas</a>
+                    <a href="calculator.html">Calculadora</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="about.html">Sobre Nós</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Comunidade</h4>
+                    <a href="#discord">Discord Oficial</a>
+                    <a href="#contribute">Como Contribuir</a>
+                    <a href="#support">Apoiar o Projeto</a>
+                    <a href="#team">Nossa Equipe</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Suporte</h4>
+                    <a href="#contact">Contato</a>
+                    <a href="#bug-report">Reportar Bug</a>
+                    <a href="#suggestions">Sugestões</a>
+                    <a href="faq.html">Perguntas Frequentes</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="terms.html">📋 Termos de Uso</a>
+                    <a href="privacy.html">🔒 Política de Privacidade</a>
+                    <a href="#disclaimer">Isenção de Responsabilidade</a>
+                    <a href="#roblox">Sobre o Roblox</a>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #444; padding-top: 2rem; margin-top: 2rem;">
+                <p>&copy; 2025 GaG Receitas BR - Guia não-oficial da comunidade brasileira de Grow a Garden</p>
+                <p style="margin-top: 0.5rem; opacity: 0.8;">Feito com ❤️ para os jogadores brasileiros | Este site não é afiliado ao Roblox Corporation</p>
+                <p style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.6;">
+                    Roblox® é marca registrada da Roblox Corporation | Grow a Garden é criação de desenvolvedores independentes
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('active');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animate stats on scroll
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px'
+        };
+
+        const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    const values = ['25000', '150', '50000000', '98', '24', '365'];
+                    const suffixes = ['25.000+', '150+', '50M+', '98%', '24/7', '365'];
+                    
+                    statNumbers.forEach((stat, index) => {
+                        animateValue(stat, 0, parseInt(values[index]), 2000, suffixes[index]);
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        function animateValue(element, start, end, duration, finalText) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const currentValue = Math.floor(progress * (end - start) + start);
+                
+                if (finalText.includes('M')) {
+                    element.textContent = (currentValue / 1000000).toFixed(1) + 'M+';
+                } else if (finalText.includes('K')) {
+                    element.textContent = (currentValue / 1000).toFixed(1) + 'K+';
+                } else if (finalText.includes('%')) {
+                    element.textContent = currentValue + '%';
+                } else if (finalText.includes('/')) {
+                    element.textContent = finalText;
+                } else {
+                    element.textContent = currentValue.toLocaleString() + '+';
+                }
+                
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    element.textContent = finalText;
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Contact form handlers (placeholder functionality)
+        document.querySelectorAll('.contact-link, .support-btn').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const action = this.textContent.trim();
+                    handleContactAction(action);
+                }
+            });
+        });
+
+        function handleContactAction(action) {
+            let message = '';
+            let type = 'info';
+            
+            switch(action) {
+                case 'Compartilhar':
+                    copyToClipboard(window.location.origin);
+                    message = '🔗 Link copiado! Compartilhe com seus amigos jogadores.';
+                    type = 'success';
+                    showNotification(message, type);
+                    break;
+            }
+        }
+
+        function copyToClipboard(text) {
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(text);
+            } else {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+            }
+        }
+
+        // Notification system
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            let bgColor;
+            
+            switch(type) {
+                case 'success':
+                    bgColor = 'var(--success-color)';
+                    break;
+                case 'warning':
+                    bgColor = 'var(--warning-color)';
+                    break;
+                case 'error':
+                    bgColor = 'var(--danger-color)';
+                    break;
+                default:
+                    bgColor = 'var(--info-color)';
+            }
+
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: ${bgColor};
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 10px;
+                box-shadow: var(--shadow-hover);
+                z-index: 9999;
+                max-width: 320px;
+                animation: slideIn 0.5s ease;
+                font-size: 0.9rem;
+                font-weight: 500;
+            `;
+            
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.5s ease';
+                setTimeout(() => {
+                    if (document.body.contains(notification)) {
+                        document.body.removeChild(notification);
+                    }
+                }, 500);
+            }, 5000);
+        }
+
+        // Add notification animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes slideOut {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Easter egg - team member click
+        document.querySelectorAll('.team-avatar').forEach(avatar => {
+            avatar.addEventListener('click', function() {
+                const teamCard = this.closest('.team-card');
+                const name = teamCard.querySelector('h3').textContent;
+                showNotification(`👋 Olá! Sou ${name.split(' ')[0]} e agradeço por visitar nosso site!`, 'success');
+            });
+        });
+
+        // Welcome message
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                showNotification('🇧🇷 Bem-vindo ao GaG Receitas BR! Conheça nossa história e missão.', 'success');
+            }, 1000);
+        });
+
+        // Keyboard shortcut for copying site link
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'l') {
+                e.preventDefault();
+                copyToClipboard(window.location.origin);
+                showNotification('🔗 Link do site copiado!', 'success');
+            }
+        });
+
+        console.log('🇧🇷 GaG Sobre Nós - Página carregada com sucesso!');
+    </script>
+</body>
+</html>

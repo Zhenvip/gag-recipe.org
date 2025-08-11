@@ -1,0 +1,27 @@
+# GaG Receitas BR
+
+> O maior e mais completo guia brasileiro para Roblox Grow a Garden. Oferecemos receitas exclusivas, calculadoras avançadas de lucros, estratégias otimizadas e uma comunidade ativa de mais de 25.000 jogadores brasileiros.
+
+GaG Receitas BR é o site de referência para jogadores brasileiros do Roblox Grow a Garden. Nosso foco é fornecer informações precisas, estratégias testadas pela comunidade e ferramentas práticas para maximizar ganhos de Sheckles e XP. Desenvolvemos conteúdo exclusivo baseado em testes extensivos da comunidade brasileira, incluindo análises de timing ideal, combinações secretas e otimizações específicas para o servidor brasileiro.
+
+## Receitas e Estratégias
+- [Receitas Completas](https://gag-recipe.org/recipes.html): Mais de 50 receitas organizadas por categoria - Prismatic, Transcendent, receitas rápidas e combos eficientes. Cada receita inclui ingredientes detalhados, tempo de preparo, lucro esperado e dicas específicas.
+- [Calculadora de Lucros](https://gag-recipe.org/calculator.html): Calculadora avançada que considera 15+ variáveis incluindo eventos especiais, bônus VIP, fases da lua e multiplicadores de XP para otimizar ganhos.
+- [Estratégias Avançadas](https://gag-recipe.org/index.html#strategies): Guias detalhados sobre timing perfeito, combinações secretas, maximização de lucros e progressão inteligente no jogo.
+
+## Suporte e Comunidade
+- [FAQ Completo](https://gag-recipe.org/faq.html): Respostas para mais de 30 perguntas frequentes organizadas por categoria - iniciantes, receitas avançadas, problemas técnicos e estratégias de farm.
+- [Sobre o Projeto](https://gag-recipe.org/about.html): História da comunidade, missão do projeto, equipe responsável e informações de contato.
+
+## Ferramentas Exclusivas
+- [Guias Detalhados](https://gag-recipe.org/index.html#guides): Tutoriais passo-a-passo para iniciantes, estratégias avançadas e uso otimizado de ferramentas.
+- [Análises em Tempo Real](https://gag-recipe.org/index.html#features): Dados atualizados sobre eficiência de receitas, eventos especiais e oportunidades de lucro.
+
+## Legal e Conformidade
+- [Termos de Uso](https://gag-recipe.org/terms.html): Condições completas de uso do site, direitos e responsabilidades dos usuários.
+- [Política de Privacidade](https://gag-recipe.org/privacy.html): Política completa em conformidade com LGPD, detalhando coleta, uso e proteção de dados pessoais.
+
+## Opcional
+- [Informações Legais](https://gag-recipe.org/legal.html): Centro de informações legais com visão geral de todos os documentos legais e direitos dos usuários.
+- [Estatísticas da Comunidade](https://gag-recipe.org/index.html#achievements): Dados consolidados da comunidade incluindo Sheckles ganhos, taxa de sucesso das receitas e estatísticas de engajamento.
+

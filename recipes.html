@@ -1149,86 +1149,93 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-            document.getElementById('navMenu').classList.toggle('active');
-        });
+        // Initialize all functionality when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    document.getElementById('navMenu').classList.toggle('active');
+                });
+            }
 
-        // Search and filter functionality
-        const searchInput = document.getElementById('searchInput');
-        const recipeCards = document.querySelectorAll('.recipe-card');
-        const filterTabs = document.querySelectorAll('.filter-tab');
-        const categoryCards = document.querySelectorAll('.category-card');
-        let currentFilter = 'all';
+            // Search and filter functionality
+            const searchInput = document.getElementById('searchInput');
+            const recipeCards = document.querySelectorAll('.recipe-card');
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const categoryCards = document.querySelectorAll('.category-card');
+            let currentFilter = 'all';
 
-        searchInput.addEventListener('input', filterRecipes);
+            if (searchInput) {
+                searchInput.addEventListener('input', filterRecipes);
+            }
 
-        filterTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                filterTabs.forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-                currentFilter = this.getAttribute('data-filter');
-                filterRecipes();
-            });
-        });
-
-        function filterRecipes() {
-            const searchTerm = searchInput.value.toLowerCase();
-            
-            recipeCards.forEach(card => {
-                const recipeName = card.querySelector('h4').textContent.toLowerCase();
-                const ingredients = Array.from(card.querySelectorAll('.ingredient-tag'))
-                    .map(span => span.textContent.toLowerCase()).join(' ');
-                const category = card.getAttribute('data-category');
-                const profit = card.getAttribute('data-profit');
-                
-                const matchesSearch = recipeName.includes(searchTerm) || ingredients.includes(searchTerm);
-                let matchesFilter = currentFilter === 'all';
-                
-                if (!matchesFilter) {
-                    if (currentFilter === 'high-profit') {
-                        matchesFilter = profit === 'high';
-                    } else {
-                        matchesFilter = category === currentFilter;
-                    }
-                }
-                
-                if (matchesSearch && matchesFilter) {
-                    card.style.display = 'block';
-                    card.classList.add('fade-in-up');
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-
-            // Update results count
-            const visibleCards = document.querySelectorAll('.recipe-card[style*="block"], .recipe-card:not([style*="none"])');
-            const resultsCount = visibleCards.length;
-            
-            // You could add a results counter here if needed
-        }
-
-        // Category card click functionality
-        categoryCards.forEach(card => {
-            card.addEventListener('click', function() {
-                const category = this.getAttribute('data-category');
-                filterTabs.forEach(t => t.classList.remove('active'));
-                const targetTab = document.querySelector(`[data-filter="${category}"]`);
-                if (targetTab) {
-                    targetTab.classList.add('active');
-                    currentFilter = category;
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    currentFilter = this.getAttribute('data-filter');
                     filterRecipes();
-                }
-                
-                // Scroll to recipe grid
-                document.querySelector('.recipe-display').scrollIntoView({
-                    behavior: 'smooth'
                 });
             });
-        });
 
-        // Favorite functionality
-        function toggleFavorite(button) {
+            function filterRecipes() {
+                const searchTerm = searchInput.value.toLowerCase();
+            
+                recipeCards.forEach(card => {
+                    const recipeName = card.querySelector('h4').textContent.toLowerCase();
+                    const ingredients = Array.from(card.querySelectorAll('.ingredient-tag'))
+                        .map(span => span.textContent.toLowerCase()).join(' ');
+                    const category = card.getAttribute('data-category');
+                    const profit = card.getAttribute('data-profit');
+                    
+                    const matchesSearch = recipeName.includes(searchTerm) || ingredients.includes(searchTerm);
+                    let matchesFilter = currentFilter === 'all';
+                    
+                    if (!matchesFilter) {
+                        if (currentFilter === 'high-profit') {
+                            matchesFilter = profit === 'high';
+                        } else {
+                            matchesFilter = category === currentFilter;
+                        }
+                    }
+                    
+                    if (matchesSearch && matchesFilter) {
+                        card.style.display = 'block';
+                        card.classList.add('fade-in-up');
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Update results count
+                const visibleCards = document.querySelectorAll('.recipe-card[style*="block"], .recipe-card:not([style*="none"])');
+                const resultsCount = visibleCards.length;
+                
+                // You could add a results counter here if needed
+            }
+
+            // Category card click functionality
+            categoryCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    const targetTab = document.querySelector(`[data-filter="${category}"]`);
+                    if (targetTab) {
+                        targetTab.classList.add('active');
+                        currentFilter = category;
+                        filterRecipes();
+                    }
+                    
+                    // Scroll to recipe grid
+                    document.querySelector('.recipe-display').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Favorite functionality - make it global so HTML onclick can access it
+            window.toggleFavorite = function(button) {
             if (button.textContent === '🤍') {
                 button.textContent = '❤️';
                 showNotification('❤️ Receita adicionada aos favoritos!');
@@ -1242,34 +1249,34 @@
             }
         }
 
-        function saveFavorite(recipeName) {
-            let favorites = JSON.parse(localStorage.getItem('gagFavorites') || '[]');
-            if (!favorites.includes(recipeName)) {
-                favorites.push(recipeName);
+            function saveFavorite(recipeName) {
+                let favorites = JSON.parse(localStorage.getItem('gagFavorites') || '[]');
+                if (!favorites.includes(recipeName)) {
+                    favorites.push(recipeName);
+                    localStorage.setItem('gagFavorites', JSON.stringify(favorites));
+                }
+            }
+
+            function removeFavorite(recipeName) {
+                let favorites = JSON.parse(localStorage.getItem('gagFavorites') || '[]');
+                favorites = favorites.filter(name => name !== recipeName);
                 localStorage.setItem('gagFavorites', JSON.stringify(favorites));
             }
-        }
 
-        function removeFavorite(recipeName) {
-            let favorites = JSON.parse(localStorage.getItem('gagFavorites') || '[]');
-            favorites = favorites.filter(name => name !== recipeName);
-            localStorage.setItem('gagFavorites', JSON.stringify(favorites));
-        }
+            // Load favorites on page load
+            function loadFavorites() {
+                const favorites = JSON.parse(localStorage.getItem('gagFavorites') || '[]');
+                recipeCards.forEach(card => {
+                    const recipeName = card.querySelector('h4').textContent;
+                    const favoriteBtn = card.querySelector('.favorite-btn');
+                    if (favorites.includes(recipeName)) {
+                        favoriteBtn.textContent = '❤️';
+                    }
+                });
+            }
 
-        // Load favorites on page load
-        function loadFavorites() {
-            const favorites = JSON.parse(localStorage.getItem('gagFavorites') || '[]');
-            recipeCards.forEach(card => {
-                const recipeName = card.querySelector('h4').textContent;
-                const favoriteBtn = card.querySelector('.favorite-btn');
-                if (favorites.includes(recipeName)) {
-                    favoriteBtn.textContent = '❤️';
-                }
-            });
-        }
-
-        // Notification system
-        function showNotification(message) {
+            // Notification system - make it global so it can be accessed from toggleFavorite
+            window.showNotification = function(message) {
             const notification = document.createElement('div');
             notification.style.cssText = `
                 position: fixed;
@@ -1299,57 +1306,56 @@
             }, 3000);
         }
 
-        // Add CSS animations for notifications
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes slideIn {
-                from {
-                    transform: translateX(100%);
-                    opacity: 0;
+            // Add CSS animations for notifications
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
                 }
-                to {
-                    transform: translateX(0);
-                    opacity: 1;
+                
+                @keyframes slideOut {
+                    from {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                    to {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
                 }
-            }
-            
-            @keyframes slideOut {
-                from {
-                    transform: translateX(0);
-                    opacity: 1;
-                }
-                to {
-                    transform: translateX(100%);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
+            `;
+            document.head.appendChild(style);
 
-        // Initialize page
-        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize page
             loadFavorites();
-        });
 
-        // URL parameter handling for direct category access
-        const urlParams = new URLSearchParams(window.location.search);
-        const categoryParam = urlParams.get('category');
-        const searchParam = urlParams.get('q');
+            // URL parameter handling for direct category access
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get('category');
+            const searchParam = urlParams.get('q');
 
-        if (categoryParam) {
-            const targetTab = document.querySelector(`[data-filter="${categoryParam}"]`);
-            if (targetTab) {
-                filterTabs.forEach(t => t.classList.remove('active'));
-                targetTab.classList.add('active');
-                currentFilter = categoryParam;
+            if (categoryParam) {
+                const targetTab = document.querySelector(`[data-filter="${categoryParam}"]`);
+                if (targetTab) {
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    targetTab.classList.add('active');
+                    currentFilter = categoryParam;
+                    filterRecipes();
+                }
+            }
+
+            if (searchParam) {
+                searchInput.value = searchParam;
                 filterRecipes();
             }
-        }
-
-        if (searchParam) {
-            searchInput.value = searchParam;
-            filterRecipes();
-        }
+        }); // End of DOMContentLoaded
 
         console.log('🍳 GaG Receitas - Página de receitas carregada com sucesso!');
     </script>
